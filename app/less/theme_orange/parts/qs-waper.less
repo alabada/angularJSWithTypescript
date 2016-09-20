@@ -1,0 +1,40 @@
+#myTab.nav-tabs {
+    border-bottom: 1px solid @nav-tabs-border-color;
+    > li {
+        float: left;
+        // Make the list-items overlay the bottom border
+        margin-bottom: -1px;
+
+        // Actual tabs (as links)
+        > a {
+            margin-right: 2px;
+            line-height: 1.2; //////
+            color:@text-color;////
+            border: 1px solid transparent;
+            border-radius: 0;
+            &:hover {
+                border-color: @nav-tabs-link-hover-border-color @nav-tabs-link-hover-border-color @nav-tabs-border-color;
+            }
+        }
+
+        // Active state, and its :hover to override normal :hover
+        &.active > a {
+            &,
+            &:hover,
+            &:focus {
+                transition: all 0.3s ease-out;
+                color: @nav-tabs-active-link-hover-color;
+                background-color: @orange;
+                border: 1px solid @nav-tabs-active-link-hover-border-color;
+                border-bottom-color: transparent;
+                color:#fff;
+                cursor: default;
+            }
+        }
+    }
+    // pulling this in mainly for less shorthand
+    &.nav-justified {
+        .nav-justified();
+        .nav-tabs-justified();
+    }
+}

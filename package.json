@@ -1,0 +1,39 @@
+{
+  "name": "qs-admin",
+  "version": "1.0.0",
+  "description": "qs-admin",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://@p.com:22/diffusion/WISS/wiss.git"
+  },
+  "author": "zhiheng.li",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.14.3",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "json-server": "^0.8.19",
+    "less-plugin-autoprefix": "^1.5.1",
+    "run-sequence": "^1.2.2",
+    "del": "^2.2.0",
+    "gulp-debug": "^2.1.2",
+    "gulp-inject": "^4.0.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-tslint": "^5.0.0",
+    "gulp-typescript": "^2.13.0",
+    "typescript": "^1.8.10",
+    "typings": "^0.8.1",
+    "superstatic": "^4.0.2",
+    "tslint": "^3.8.1"
+  }
+}

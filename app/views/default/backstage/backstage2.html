@@ -1,0 +1,83 @@
+<div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <qs-panel colour="default">
+                <qs-panel-head>
+                    <div style="text-align: center">
+                        <span>销售额表</span>
+                    </div>
+                </qs-panel-head>
+                <qs-panel-body>
+                    <div class="row">
+                        <canvas qs-chart-bar chart-options="barOptions" chart-data="barData"></canvas>
+                    </div>
+                </qs-panel-body>
+            </qs-panel>
+        </div>
+        <div class="col-lg-6">
+            <qs-panel colour="default">
+                <qs-panel-head>
+                    <div style="text-align: center">
+                        <span>工作提醒</span>
+                    </div>
+                </qs-panel-head>
+                <qs-panel-body>
+
+                </qs-panel-body>
+            </qs-panel>
+        </div>
+    </div>
+
+    <div class="row">
+        <!--订单占比-->
+        <div class="col-lg-4">
+            <qs-panel colour="default">
+                <qs-panel-head>
+                    <div style="text-align: center">
+                        <span>订单占比</span>
+                    </div>
+                </qs-panel-head>
+                <qs-panel-body>
+                    <div class="col-lg-8">
+                        <canvas  width="1" height="1" qs-chart-pie chart-options="pieOptions" chart-data="pieData" chart-legend="pieChart1" ></canvas>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div qs-chart-legend chart-legend="pieChart1"></div>
+                    </div>
+                </qs-panel-body>
+            </qs-panel>
+        </div>
+        <!--最新订单-->
+        <div class="col-lg-4">
+            <qs-panel colour="default">
+                <qs-panel-head>
+                    <div style="text-align: center">
+                        <span>最新订单</span>
+                    </div>
+                </qs-panel-head>
+                <qs-panel-body>
+
+                </qs-panel-body>
+            </qs-panel>
+        </div>
+
+        <div class="col-lg-4">
+            <qs-panel colour="default">
+                <qs-panel-head>
+                    <div style="text-align: center">
+                        <span>财账管理</span>
+                    </div>
+                </qs-panel-head>
+                <qs-panel-body>
+                    <div class="row">
+                        <canvas qs-chart-line chart-options="lineOptions" chart-data="lineData"></canvas>
+                    </div>
+                </qs-panel-body>
+            </qs-panel>
+        </div>
+
+    </div>
+
+</div>

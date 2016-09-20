@@ -1,0 +1,142 @@
+{
+  "overallEleConfig": {
+    "label": {
+      "class ": "col-lg-3 col-md-3"
+    },
+    "formEleCont": {
+      "class": "col-lg-9 col-md-9"
+    }
+  },
+  "formAttrs":{
+    "class":"col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 form-horizontal"
+  },
+  "formLayout": [{
+    "name": "name",
+    "eleConfig": {
+      "label": {
+        "text": "用户名"
+      },
+      "formEle": {
+        "placeholder": "请输入用户名",
+        "required": "true",
+        "ng-pattern": "/^[A-Za-z]{1}[0-9A-Za-z_]{1,19}$/",
+        "w5c-unique-check": "{url:'http://www.ngnice.com/api/test/user/name/check?name='+vali.entity.name}"
+      }
+    },
+    "valiRule": {
+      "pattern": "用户名必须输入字母、数字、下划线,以字母开头",
+      "required": "输入的用户名不能为空",
+      "w5cuniquecheck": "输入用户名已经存在，请重新输入"
+    }
+  }, {
+    "type": "password",
+    "name": "password",
+    "eleConfig": {
+      "label": {
+        "text": "密码"
+      },
+      "formEle": {
+        "placeholder": "输入你的密码",
+        "required": "true",
+        "ng-minlength": 5,
+        "ng-maxlength": 15
+      }
+    },
+    "valiRule":{
+      "required" : "密码不能为空",
+      "minlength": "密码长度不能小于{minlength}",
+      "maxlength": "密码长度不能大于{maxlength}"
+    }
+  }, {
+    "type": "password",
+    "name": "passwordrepeat",
+    "eleConfig": {
+      "label": {
+        "text": "重复密码"
+      },
+      "formEle": {
+        "placeholder": "再次输入你的密码",
+        "required": "true",
+        "w5c-repeat": "password"
+      }
+    },
+    "valiRule":{
+      "required": "重复密码不能为空",
+      "repeat"  : "两次密码输入不一致"
+    }
+  }, {
+    "type": "email",
+    "name": "email",
+    "eleConfig ": {
+      " label": {
+        "text": " 邮箱"
+      },
+      "formEle": {
+        "placeholder": "请输入你的邮箱",
+        "required": "true"
+      }
+    },
+    "valiRule": {
+      "email ": "邮箱格式错误",
+      "required ": "邮箱未填写"
+    }
+  },  {
+    "type": "select",
+    "name": "testSeclect",
+    "eleConfig": {
+      "label": {
+        "text": "普通下拉框"
+      },
+      "formEle":{
+        "placeholder":"请选择",
+        "filter":"| limitTo:3 | orderBy"
+      }
+    },
+    "data": [{
+      "id":"1",
+      "text": "第一项",
+      "value":"item_1"
+    }, {
+      "id":"2",
+      "text": "第二项",
+      "value":"item_2"
+    },{
+      "id":"3",
+      "text": "第三项",
+      "value":"item_3"
+    },{
+      "id":"4",
+      "text": "这是第四项,会被限制显示",
+      "value":"item_4"
+    }]
+  },{
+    "type": "textarea",
+    "name": "remark",
+    "eleConfig": {
+      "label": {
+        "text": "文本域"
+      },
+      "formEle": {
+        "rows": "8"
+      }
+    }
+  },{
+    "type": "btns",
+    "eleConfig": {
+      "formEleCont": {
+        "class": "col-md-9 col-lg-9 col-lg-offset-3 col-md-offset-3 "
+      },
+      "items": [{
+        "type": "submit",
+        "class": "btn-success btn",
+        "text": "保存",
+        "w5c-form-submit": "formCtr.submit()"
+      }, {
+        "type": "button",
+        "class": "btn-info btn",
+        "text": "清空",
+        "ng-click": "vali.reset()"
+      }]
+    }
+  }]
+}

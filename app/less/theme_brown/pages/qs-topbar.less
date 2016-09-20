@@ -1,0 +1,138 @@
+.navbar.navbar-default{
+    background-color: #fff;
+    &.navbar-static-top{
+        border-top:2px solid @logo-bg;
+        .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
+            background-color:@orange;
+            color:#fff;
+        }
+    }
+}
+.navbar-header {
+    width: 328px;
+    .navbar-brand,
+    .navbar-brand:hover,
+    .navbar-brand:focus,
+    .navbar-brand:active{
+        padding: 0;
+        display: block;
+        width:100%;
+        font-size:0;
+        line-height:0;
+        overflow:hidden;  
+        background: url("../../img/qishon_logo_brown.png") no-repeat center center;
+        background-color: @logo-bg;
+
+    }
+}
+//主题切换
+.theme-ul.nav{
+    padding: 5px 0;
+    margin-top:40px;
+    .theme-li{
+        float: left;
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border:1px solid @text-color;
+        line-height:0;
+        font-size:0;
+        overflow:hidden;
+        margin-right:8px;
+        &.theme-gray{
+            background-color: @gray;
+        }
+        &.theme-orange{
+            background-color: @orange;
+        }
+        &.theme-brown{
+            background-color: @brown;
+        }
+        &.active{
+            outline: 2px solid #a9a7a7;
+        }
+    }
+}
+
+.navbar-top-links {
+    margin-right: 0;
+}
+
+.navbar-top-links li {
+    display: inline-block;
+    border-left:1px solid @defaut-border-color;
+}
+
+.navbar-top-links li:first-child {
+    border-left:none;
+}
+
+.navbar-top-links li a {
+    font-size: 16px;
+    color:@text-color;
+    padding:0 35px;    
+    line-height:@navbar-height;
+    i{
+        font-size:30px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top:-5px;
+    }
+    &:after{
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+
+.navbar-top-links .dropdown-menu li {
+    display: block;
+}
+
+.navbar-top-links .dropdown-menu li:last-child {
+    margin-right: 0;
+}
+
+.navbar-top-links .dropdown-menu li a {
+    padding: 3px 20px;
+    min-height: 0;
+}
+
+.navbar-top-links .dropdown-menu li a div {
+    white-space: normal;
+}
+
+.navbar-top-links .dropdown-messages,
+.navbar-top-links .dropdown-tasks,
+.navbar-top-links .dropdown-alerts {
+    width: 310px;
+    min-width: 0;
+}
+
+.navbar-top-links .dropdown-messages {
+    margin-left: 5px;
+}
+
+.navbar-top-links .dropdown-tasks {
+    margin-left: -59px;
+}
+
+.navbar-top-links .dropdown-alerts {
+    margin-left: -123px;
+}
+
+.navbar-top-links .dropdown-menu  {
+    right: 0;
+    left: auto;
+    li{
+        a{
+            font-size:@font-size-base;
+            line-height:1.5;
+        }
+        i{
+            font-size:@font-size-base;
+        }
+    }
+}

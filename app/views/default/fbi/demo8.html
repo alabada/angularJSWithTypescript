@@ -1,0 +1,103 @@
+<style>
+  .fix-price{
+    padding: 15px;
+    border: 1px solid #428bca;
+    border-radius: 5px;
+  }
+    .fix-price .panel-primary{
+      width: 50%;
+      float: left;
+    }
+    .fix-price .panel-primary.class{
+      border-right: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+      .fix-price .panel-primary.class .panel-heading{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;   
+      }
+      .fix-price .panel-primary.class hr{
+        margin-right: -15px;
+      }
+    .fix-price .panel-primary.price{
+      border-left: none;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+      .fix-price .panel-primary.price .panel-heading{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      .fix-price .panel-primary.price hr{
+        margin-left: -15px;
+      }
+
+</style>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h3>商品信息</h3>
+    <div class="form-group">
+        <label class="control-label col-md-2 text-right">款号价格:&emsp;</label> 
+        <div  class= "col-md-10">
+          <label>
+            <input type="radio" name="goodPrice" ng-model="goodInfo.negote_price" value="false"> 面议
+          </label>
+          <label>
+            <input type="radio" name="goodPrice" ng-model="goodInfo.negote_price" value="true"> 定价
+          </label>
+        </div>
+    </div>      
+    <!-- 窗体 -->
+    <div class="fix-price col-md-10 col-md-offset-2" ng-if="goodInfo.negote_price == 'true'">
+      <div class="fix-price-top">
+        <div class="form-group col-md-6">
+          <label class="control-label">货币单位</label>
+          <div class="input-cont">
+            <oi-select 
+              ng-model = "unit.currency"
+              oi-options="currency as currency.text for currency in unitData.currencies track by currency.id"
+            ></oi-select>
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <label class="control-label">度量单位</label>
+          <div class="input-cont">
+            <oi-select 
+              ng-model = "unit.length"
+              oi-options="length as length.text for length in unitData.lengths track by length.id"
+            ></oi-select>
+          </div>
+        </div>
+      </div>
+      <!-- 类型 -->
+      <div class="panel panel-primary class">
+         <div class="panel-heading">
+           类型
+         </div>
+        <div class="panel-body">
+          <input type="text" class="form-control"><hr>
+          <input type="text" class="form-control"><hr>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+      <!-- end类型 -->
+
+      <!-- 报价 -->
+      <div class="panel panel-primary price">
+         <div class="panel-heading">
+           报价
+         </div>
+        <div class="panel-body">
+          <input type="text" class="form-control"><hr>
+          <input type="text" class="form-control"><hr>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+      <!-- end报价 -->
+      <p class='text-muted'>提示:&ensp;如果没有填写内容,在前台不会显示价格,请至少设置一种价格类型</p>
+    </div>
+    <!--end 窗体 -->
+  </div>
+</div>
+

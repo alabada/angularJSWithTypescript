@@ -1,0 +1,69 @@
+{"layoutData": [{
+  "type": "text",
+  "form-group": {
+  },
+  "formEleCont":{
+    "class": ""
+  },
+  "formEle": {
+    "placeholder": "用户名",
+    "name": "name",
+    "required":"true",
+    "ng-pattern":"/^[A-Za-z]{1}[0-9A-Za-z_]{1,19}$/",
+    "w5c-unique-check":"{url:'http://www.ngnice.com/api/test/user/name/check?name='+vali.entity.name}"
+  }
+},
+  {
+    "type": "password",
+    "form-group": {
+    },
+    "formEleCont":{
+      "class":""
+    },
+    "formEle": {
+      "placeholder": "输入你的密码",
+      "required":"true",
+      "name": "password",
+      "ng-minlength":5,
+      "ng-maxlength":15
+    }},
+  {
+    "type": "btns",
+    "form-group": {
+
+    },
+    "formEleCont":{
+      "class":""
+    },
+    "btns":[
+      {
+        "type":"submit",
+        "class":"btn btn-lg btn-success btn-block",
+        "text":"登录",
+        "w5c-form-submit":"formCtr.submit()"
+      }
+    ]
+  }
+  ],
+  "config": [
+    {
+      "entity":{
+        "username":"",
+        "password":""
+      },
+      "validateOptions" : {
+        "blurTrig": true
+      },
+        "name":{
+          "pattern"       : "用户名必须输入字母、数字、下划线,以字母开头",
+          "required"      : "输入的用户名不能为空",
+          "w5cuniquecheck": "输入用户名已经存在，请重新输入"
+        },
+        "password":{
+          "required" : "密码不能为空",
+          "minlength": "密码长度不能小于{minlength}",
+          "maxlength": "密码长度不能大于{maxlength}"
+        }
+      }
+  ]
+}

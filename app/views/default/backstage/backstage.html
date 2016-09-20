@@ -1,0 +1,117 @@
+<!-- start
+    html      : app/views/default/backstage/backstage.html
+    controller: app/js/controller/backstage/BackstageController.js
+    less      : app/less/theme_brown/pages/backstage.less 
+-->
+<div class="row">
+    <div class="col-lg-8 col-md-8 ">
+        <qs-panel colour="default" class="Shortcuts">
+            <qs-panel-body>
+                <ul class="list-unstyled" >
+                    <li data-ng-repeat="shortcut in $parent.$parent.Shortcuts"><a href ><i data-ng-class="['fa','fa-'+(shortcut.ico)]"></i>{{shortcut.text}}</a></li>    
+                    <li><a href ><i class="fa fa-plus-circle" ></i>新增快捷</a></li>
+                </ul>
+            </qs-panel-body>
+        </qs-panel>
+
+
+
+        <qs-panel colour="default" class=" work-remind">
+            <qs-panel-head>
+                工作提醒<span class="panel-head-separator">|</span><small>Work Remind</small>
+            </qs-panel-head>
+            <qs-panel-body>
+                <span class="angle-ctrl left"><i class="fa fa-angle-left"></i></span><!--
+                --><ul class="remind-cont list-unstyled">
+                    <li data-ng-repeat="remind in $parent.$parent.wordReminds">
+                        <span>{{remind.title}}</span>
+                        <span>{{remind.numb}}</span>
+                        <span>{{remind.desc}}</span>
+                    </li>
+                </ul><!--
+                --><span class="angle-ctrl right"><i class="fa fa-angle-right"></i></span>
+            </qs-panel-body>
+        </qs-panel>
+
+        <qs-panel colour="default" class="sales-chart">
+            <qs-panel-head>
+                营业额表<span class="panel-head-separator">|</span><small>Sales chart</small>
+            </qs-panel-head>
+            <qs-panel-body>
+                <h5>2016年总营业额(元)</h5>
+                <div class="row">
+                    <div class="col-lg-9">
+                        <canvas qs-chart-bar chart-options="barOptions" chart-data="barData" chart-legend="barChart1"></canvas>
+                    </div>
+                    <div class="col-lg-3">
+                        <div qs-chart-legend chart-legend="barChart1"></div>
+                    </div>
+                </div>
+            </qs-panel-body>
+        </qs-panel>
+        <qs-panel colour="default">
+            <qs-panel-head>
+                店铺订单占比<span class="panel-head-separator">|</span><small>Proportion of Shop orders</small>
+            </qs-panel-head>
+            <qs-panel-body>
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="col-lg-3">
+                            <canvas width="1" height="1"  qs-chart-doughnut chart-options="doughnut1Options" chart-data="doughnut1Data"></canvas>
+                        </div>
+                        <div class="col-lg-3">
+                            <canvas width="1" height="1"  qs-chart-doughnut chart-options="doughnut2Options" chart-data="doughnut2Data"></canvas>
+                        </div>
+                        <div class="col-lg-3">
+                            <canvas width="1" height="1" qs-chart-doughnut chart-options="doughnut3Options" chart-data="doughnut3Data"></canvas>
+                        </div>
+                        <div class="col-lg-3">
+                            <canvas width="1" height="1" qs-chart-doughnut chart-options="doughnut4Options" chart-data="doughnut4Data"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <ul class="qs-chart-legend">
+                            <li><i class="fa fa-circle"></i>京东店铺</li>
+                            <li><i class="fa fa-circle"></i>淘宝店铺</li>
+                            <li><i class="fa fa-circle"></i>导购屏</li>
+                            <li><i class="fa fa-circle"></i>网上商城</li>
+                        </ul>
+                    </div>
+                </div>
+            </qs-panel-body>
+        </qs-panel>
+    </div>
+    <div class="col-lg-4 col-md-4 last-order">
+        <qs-panel colour="default" class= "actives-remind">
+            <qs-panel-head>
+                活动提醒<span class="panel-head-separator">|</span><small>activities Remind</small>
+            </qs-panel-head>
+            <qs-panel-body>
+                <div class="panel-activity" data-ng-repeat="act in activities">
+                    <h4><i></i>{{act.name}}</h4>
+                    <div class="activity-detail-cont">
+                        <p>{{act.detail}}</p>
+                        <p class="remarks"><span>{{act.organizer}}</span><span>{{act.publishTime}}</span></p>
+                    </div>
+                </div>
+            </qs-panel-body>
+        </qs-panel>
+        <qs-panel colour="default">
+            <qs-panel-head>
+                最新订单<span class="panel-head-separator">|</span><small>Latest order</small>
+            </qs-panel-head>
+            <qs-panel-body>
+                <ul class="list-unstyled">
+                    <li data-ng-repeat="order in lastOrder">
+                        <span class="last-order-ico">{{$index+1}}</span>
+                        <p>{{order.msg}}</p>
+                        <p><span class="time">{{order.time}}</span> by <span class="address">{{order.address}}</span></p>
+                        <a href class = "fa fa-search see"></a>
+                        <div class="separator"></div>
+                    </li>
+                </ul>
+            </qs-panel-body>
+        </qs-panel>
+    </div>
+</div>
+<!-- end html:app/views/default/backstage/backstage.html -->

@@ -1,0 +1,26 @@
+{
+  "data": [{
+    "type": "qs-panel",
+    "attr": {
+      "heading": "成衣商品",
+      "colour": "default"
+    },
+    "table": {
+      "columnNameReal": "id,img,goodName,code,cate,brand,season,price",
+      "columnNameShow": [
+        {"name":"序号"},
+        {"name":"图片"},
+        {"name":"商品名称"},
+        {"name":"商品编码"},
+        {"name":"商品分类"},
+        {"name":"商品品牌"},
+        {"name":"销售季"},
+        {"name":"零售价"}
+      ],
+      "pagination": {
+        "direction-links": "true",
+        "boundary-links": "true"
+      }
+    }
+  }]
+}

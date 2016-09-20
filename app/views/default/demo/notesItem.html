@@ -1,0 +1,17 @@
+<p class="lead">
+  <a ui-sref="dashboard.notes.list" class="btn btn-large btn-default">
+    <i class="glyphicon glyphicon-arrow-left"></i>
+  </a>
+  <a ui-sref="dashboard.notes.edit({id:note.id})" class="btn btn-default pull-right">
+    <i class="glyphicon glyphicon-pencil"></i>
+  </a>
+</p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+      {{note.name}}
+  </div>
+  <div class="panel-body">
+    <pre>{{note.content}}</pre>
+  </div>
+</div>

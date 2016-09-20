@@ -1,0 +1,73 @@
+@import "bower_components";
+@import "qs-variables";
+@import "qs-mixins";
+@import "qs-formLayout.less";
+@import "asset";
+
+// Global Styles
+// Wrappers
+
+.ta-hidden-input{
+  display: none;
+}
+#wrapper {
+    width: 100%;
+}
+#page-wrapper {
+    padding: 0 15px;
+    min-height: 568px;
+    background-color: white;
+}
+
+@media(min-width:768px) {
+    #page-wrapper {
+        background-color: #fff;
+        position: inherit;
+        margin: 3px 2px 0 252px;
+        padding: 0 30px;
+        border-left: 1px solid darken(@gray-lightest, 6.5%);
+    }
+}
+
+// w5c
+@import "parts/qs-w5cValidator";
+//imgView 
+@import "parts/qs-img-view";
+//qs-linkage
+@import "parts/qs-linkage";
+// --Topbar
+@import "parts/qs-topbar";
+
+// --Sidebar
+@import "parts/qs-sidebar";
+
+//waper
+@import "parts/qs-waper";
+
+// Buttons
+@import "parts/qs-btns";
+
+//grid Demo
+@import "parts/qs-grid";
+
+// Chat Widget
+@import "parts/qs-ChatWidget";
+
+// Login Page
+@import "parts/qs-loginPage";
+
+// Flot Charts Containers
+@import "parts/qs-flotChat";
+
+// DataTables Overrides
+@import "parts/qs-dataTable";
+
+// Custom Colored Panels
+@import "parts/qs-panel";
+
+//nav tab
+@import "parts/qs-navs";
+// 二次开发组件object-table
+@import "parts/qs-table";
+@import "parts/themes_table/blue-dust";
+@import "parts/themes_table/dark-sky";

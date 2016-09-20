@@ -1,0 +1,27 @@
+<div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">grid</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+
+    <br />
+    <h3>新增item</h3>
+    <hr>
+
+    <form>
+        <p>I D &nbsp;&nbsp;&nbsp;: <input type="text" ng-model="curItem.id"/></p>
+        <p>Name: <input type="text" ng-model="curItem.name"/></p>
+        <p>Age: <input type="text" ng-model="curItem.age"/></p>
+        <p>Email: <input type="text" ng-model="curItem.email"/></p>
+        <p>Dept: <input type="text" ng-model="curItem.dept"/></p>
+        <p>Telephone: <input type="text" ng-model="curItem.telephone"/></p>
+    </form>
+
+    <button class="btn btn-default" ng-click="addNewItem()">保存</button>
+    <br />
+    <button class="btn btn-default" ng-click="returnList()">返回列表</button>
+
+
+</div>

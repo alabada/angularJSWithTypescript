@@ -1,0 +1,32 @@
+<div class="show-grid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">grid</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+
+    <br />
+    <h3>Grid</h3>
+    <hr>
+
+    <!-- 查找框组 -->
+    <qs-grid-search url="gridSearchJsonUrl" class="grid-search">
+    </qs-grid-search>
+    <hr>
+
+    <!-- crud组 -->
+    <qs-grid-crud url="gridCrudJsonUrl">
+    </qs-grid-crud>
+    <hr>
+
+    <!-- panel组-->
+    <qs-grid-panel interface="interface">
+    </qs-grid-panel>
+
+</div>
+
+<script type="text/ng-template" id="nameTemplateId">
+    <h3>{{item.name}}</h3>
+    <img width="300px" src="img/slides/slide1.jpg">
+</script>

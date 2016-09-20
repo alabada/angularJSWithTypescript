@@ -1,0 +1,121 @@
+{
+  "formAttrs":{
+    "class":"form-horizontal right-detail-form"
+  },
+  "overallEleConfig": {
+    "label": {
+      "class ": "col-lg-3 col-md-3"
+    },
+    "formEleCont": {
+      "class": "col-lg-9 col-md-9"
+    },
+    "form-group":{
+      "class":"demo2-form-group"
+    }
+  },
+  "formLayout": [{
+    "type": "static",
+    "name": "series",
+    "eleConfig": {
+      "label": {
+        "text": "商品系列:"
+      }
+    }
+  },{
+    "type": "static",
+    "name": "theme",
+    "eleConfig": {
+      "label": {
+        "text": "商品主题:"
+      }
+    }
+  },{
+    "type": "static",
+    "name": "style",
+    "eleConfig": {
+      "label": {
+        "text": "商品风格:"
+      }
+    }
+  },{
+    "type": "static",
+    "name": "stereotype",
+    "eleConfig": {
+      "label": {
+        "text": "商品版型:"
+      }
+    }
+  },{
+    "type": "static",
+    "name": "costValue",
+    "eleConfig": {
+      "label": {
+        "text": "成&ensp;本&ensp;价:"
+      }
+    }
+  },{
+    "type": "static",
+    "name": "year",
+    "eleConfig": {
+      "label": {
+        "text": "年&emsp;&emsp;份:"
+      }
+    }
+  },{
+    "type": "static",
+    "name": "GBcode",
+    "eleConfig": {
+      "label": {
+        "text": "国&ensp;标&ensp;码:"
+      }
+    }
+  },{
+    "type": "static",
+    "name": "developmentType",
+    "eleConfig": {
+      "label": {
+        "text": "开发类型:"
+      }
+    }
+  },{
+    "type": "static",
+    "name": "describe",
+    "eleConfig": {
+      "label": {
+        "text": "商品描述:"
+      }
+    }
+  },{
+    "type": "static",
+    "name": "mnemonicSymbol",
+    "eleConfig": {
+      "label": {
+        "text": "助&ensp;记&ensp;符:"
+      }
+    }
+  },{
+    "type": "static",
+    "name": "technologyFile",
+    "eleConfig": {
+      "label": {
+        "text": "工艺文献:"
+      }
+    }
+  },{
+    "type": "static",
+    "name": "updator",
+    "eleConfig": {
+      "label": {
+        "text": "更&ensp;新&ensp;人:"
+      }
+    }
+  },{
+    "type": "static",
+    "name": "updateTime",
+    "eleConfig": {
+      "label": {
+        "text": "更新时间:"
+      }
+    }
+  }]
+}

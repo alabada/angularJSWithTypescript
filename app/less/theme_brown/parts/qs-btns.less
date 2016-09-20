@@ -1,0 +1,38 @@
+.btn-outline {
+    color: inherit;
+    background-color: transparent;
+    transition: all .5s;
+}
+
+.btn-primary.btn-outline {
+    color: @brand-primary;
+}
+
+.btn-success.btn-outline {
+    color: @brand-success;
+}
+
+.btn-info.btn-outline {
+    color: @brand-info;
+}
+
+.btn-warning.btn-outline {
+    color: @brand-warning;
+}
+
+.btn-danger.btn-outline {
+    color: @brand-danger;
+}
+
+
+.btn-default{
+  &:hover{
+    background-color: #fff;
+    color:@btn-default-bg;
+    border-color: @btn-default-bg;
+    outline: none!important;
+  }
+  &:active,&:focus{
+   outline: none!important; 
+  }
+}

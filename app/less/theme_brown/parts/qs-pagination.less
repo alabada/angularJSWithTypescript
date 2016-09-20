@@ -1,0 +1,48 @@
+.pagination {
+  > li {
+    > a,
+    > span {
+      border:none; // 
+      background-color: transparent;
+      padding:0;
+      margin: 0 4px;
+      width:24px;
+      height:24px;
+      text-align: center;
+      &:after{
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 110%;
+        vertical-align: middle;
+      }
+    }
+    &.pagination-btn{
+        >a,
+        >span{
+            width: auto;
+        }
+    }
+  }
+
+  > li > a,
+  > li > span {
+    &:hover,
+    &:focus {
+      background: none;//
+      border:none;//
+    }
+  }
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+      background-color: @brown;
+      border:none;
+      border-radius: 50%!important;
+      text-align: center;
+      padding: 0;
+    }
+  }
+}

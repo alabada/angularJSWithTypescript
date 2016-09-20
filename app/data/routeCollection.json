@@ -1,0 +1,149 @@
+{
+    "login": {
+        "url": "/pages",
+        "controllerUrl": "js/controller/loginController.js",
+        "templateUrl": "views/pages/login.html"
+    },
+    "dashboard.bootstrap": {
+
+    },
+    "dashboard.table": {
+        "url": "/table",
+        "controllerUrl": "js/controller/tableController.js",
+        "templateUrl": "views/table/table.html"
+    },
+    "dashboard.grid": {
+        "url": "/grid",
+        "controllerUrl": "js/controller/gridController.js",
+        "templateUrl": "views/grid/gridDemo.html"
+    },
+    "dashboard.gridModify": {
+        "url": "/gridModify",
+        "controllerUrl": "js/controller/gridModifyController.js",
+        "templateUrl": "views/grid/gridModify.html"
+    },
+    "dashboard.gridView": {
+        "url": "/gridView",
+        "controllerUrl": "js/controller/gridViewController.js",
+        "templateUrl": "views/grid/gridView.html"
+    },
+    "dashboard.gridAdd": {
+        "url": "/gridAdd",
+        "controllerUrl": "js/controller/gridAddController.js",
+        "templateUrl": "views/grid/gridAdd.html"
+    },
+    "dashboard.fonts": {
+        "url": "/fonts",
+        "controllerUrl": "js/controller/fontsController.js",
+        "templateUrl": "views/bootstrap/fonts/fontsDemo.html"
+    },
+
+    "dashboard.qsList": {
+        "url": "/qsList",
+        "controllerUrl": "js/controller/qsListController.js",
+        "templateUrl": "views/bootstrap/list/qsListDemo.html"
+    },
+    "dashboard.qsProgressbar": {
+        "url": "/qsProgressbar",
+        "controllerUrl": "js/controller/qsProgressbarController.js",
+        "templateUrl": "views/bootstrap/progressbar/qsProgressbarDemo.html"
+    },
+    "dashboard.qsPanel": {
+        "url": "/qsPanel",
+        "controllerUrl": "js/controller/qsPanelController.js",
+        "templateUrl": "views/bootstrap/panel/qsPanelDemo.html"
+    },
+    "dashboard.qsInput": {
+        "url": "/qsInput",
+        "controllerUrl": "js/controller/qsInputController.js",
+        "templateUrl": "views/bootstrap/input/qsInputDemo.html"
+    },
+    "dashboard.qsPagination": {
+        "url": "/qsPagination",
+        "controllerUrl": "js/controller/qsPaginationController.js",
+        "templateUrl": "views/bootstrap/pagination/qsPaginationDemo.html"
+    },
+    "dashboard.qsCarousel": {
+        "url": "/qsCarousel",
+        "controllerUrl": "js/controller/qsCarouselController.js",
+        "templateUrl": "views/bootstrap/carousel/qsCarouselDemo.html"
+    },
+    "dashboard.qsRating": {
+        "url": "/qsRating",
+        "controllerUrl": "js/controller/qsRatingController.js",
+        "templateUrl": "views/bootstrap/rating/qsRatingDemo.html"
+    },
+    "dashboard.qsLabel": {
+        "url": "/qsLabel",
+        "controllerUrl": "js/controller/qsLabelController.js",
+        "templateUrl": "views/bootstrap/label/qsLabelDemo.html"
+    },
+    "dashboard.badge": {
+        "url": "/qsbadge",
+        "controllerUrl": "js/controller/qsLabelController.js",
+        "templateUrl": "views/bootstrap/badge/qsbadgeDemo.html"
+    },
+    "dashboard.dropdown": {
+        "url": "/qsdropdown",
+        "controllerUrl": "js/controller/qsdropdownController.js",
+        "templateUrl": "views/bootstrap/dropdown/qsdropdownDemo.html"
+    },
+    "dashboard.alert": {
+        "url": "/qsalert",
+        "controllerUrl": "js/controller/qsalertController.js",
+        "templateUrl": "views/bootstrap/alert/qsalertDemo.html"
+    },
+    "dashboard.tabs": {
+        "url": "/qstabs",
+        "controllerUrl": "js/controller/qstabsController.js",
+        "templateUrl": "views/bootstrap/tabs/qstabsDemo.html"
+    },
+    "dashboard.navbar": {
+        "url": "/qsnavbar",
+        "controllerUrl": "js/controller/qsNavbarController.js",
+        "templateUrl": "views/bootstrap/navbar/qsNavbarDemo.html"
+    },
+    "dashboard.thumbnail": {
+        "url": "/qsthumbnail",
+        "controllerUrl": "js/controller/qsthumbnailController.js",
+        "templateUrl": "views/bootstrap/thumbnail/qsthumbnailDemo.html"
+    },
+    "dashboard.datepicker": {
+        "url": "/qsdatepicker",
+        "controllerUrl": "js/controller/qsdatepickerController.js",
+        "templateUrl": "views/bootstrap/datepicker/qsdatepickerDemo.html"
+    },
+    "dashboard.tooltip": {
+        "url": "/qsbuttons",
+        "controllerUrl": "js/controller/qstooltipController.js",
+        "templateUrl": "views/bootstrap/tooltip/qstooltipDemo.html"
+    },
+    "dashboard.buttons": {
+        "url": "/qsbuttons",
+        "controllerUrl": "js/controller/qsbuttonsController.js",
+        "templateUrl": "views/bootstrap/buttons/qsbuttonsDemo.html"
+    },
+    "dashboard.modal": {
+        "url": "/qsmodal",
+        "controllerUrl": "js/controller/qsmodalController.js",
+        "templateUrl": "views/bootstrap/modal/qsmodalDemo.html"
+    },
+    "dashboard.buttons": {
+        "url": "/qsbuttons",
+        "controllerUrl": "js/controller/qsbuttonsController.js",
+        "templateUrl": "views/bootstrap/buttons/qsbuttonsDemo.html"
+    },
+    "dashboard.form": {
+        "url": "/qsform",
+        "controllerUrl": "js/controller/qsformController.js",
+        "templateUrl": "views/form/qsformDemo.html"
+    },
+    "dashboard.demo": {
+    },
+    "dashboard.ueditor": {
+        "url": "/ueditor",
+        "controllerUrl": "js/controller/ueditorController.js",
+        "templateUrl": "views/demo/ueditorDemo.html"
+    }
+
+}

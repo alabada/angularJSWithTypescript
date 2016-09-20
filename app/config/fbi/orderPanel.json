@@ -1,0 +1,22 @@
+{
+  "data": [{
+    "type": "qs-panel",
+    "attr": {
+      "colour": "default"
+    },
+    "options": {
+      "showNumPerpage": "false",
+      "order": "false",
+      "operation": "false",
+      "showPagenation": "false"
+    },
+    "table": {
+      "columnNameShow": [{"name":"订单号"},{"name":"店铺"},{"name":"下单用户"},{"name":"订单日期"}],
+      "columnNameReal": "orderNum,shop,purchaser,orderDate",
+      "pagination": {
+        "direction-links": "true",
+        "boundary-links": "true"
+      }
+    }
+  }]
+}

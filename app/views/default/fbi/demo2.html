@@ -1,0 +1,48 @@
+<!--html: views/fbi/demo2 -->
+<!--controller: app/js/controller/fbi/Demo2Controller.js -->
+<!-- less:app/less/theme_brown/pages/backstage.less -->
+
+<div class="row">
+    <div class="main-page-cont" ng-class = "[rightSideIf?'sidebar-hide':'sidebar-show']">
+
+        <h2 class="page-header">{{$title}}<span class="panel-head-separator">|</span><small>Customer order list</small></h2><!--
+        --><button class =" btn btn-default add-new-order"><i class="fa fa-plus"></i>新增客户订单</button>
+
+        <!-- 查找组与增删改查组  -->
+        <div class="edit-collapse">
+            <span data-ng-click="isCollapsed=!isCollapsed" onselectstart="return false;"><!--
+                --><i class="fa fa-long-arrow-up" data-ng-class="['fa-long-arrow-' +(isCollapsed?'down':'up')]"></i><!--
+                -->{{CollapseText}}
+            </span> 
+        </div>
+        <div class="collaplse-cont" collapse="isCollapsed">
+            <div qs-form-layout 
+                url="{{editFormUrl}}" 
+                name= "top-ctrl"
+                vali = "topCtrlVali"></div>    
+        </div>
+        
+        <!-- 显示列表 -->
+        <qs-grid-panel interface="interface"></qs-grid-panel>
+        <a href data-ng-click="shScope()">show_scope</a>
+    </div><!--
+
+
+    --><!-- 右侧侧边栏 --><!--
+    --><div class="panel panel-default main-page-right-side" ng-class = "[rightSideIf?'sidebar-hide':'sidebar-show']">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+            详细信息
+        </h4>
+      </div>
+      <div class="panel-body detail-out">
+        <span class="sidebar-if" data-ng-click="rightSideIf=!rightSideIf"><i class="fa" aria-hidden="true" data-ng-class="[ rightSideIf?'fa-caret-left':'fa-caret-right']"></i></span> 
+        <div qs-form-layout 
+            url  ="{{showDetailFormLayout}}" 
+            vali = "rightDetalVali"
+            name ="right-detail"></div>
+      </div>
+    </div>
+    <!--end 右侧侧边栏 -->
+</div>
+<!-- end views/fbi/demo2 -->

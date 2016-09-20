@@ -1,0 +1,84 @@
+{
+  "overallEleConfig": {
+    "formGroup": {
+      "class":"top-ctrl-ipt"
+    }
+  },
+  "formAttrs":{
+     "class":"form-inline"
+  },
+  "formLayout": [
+    {
+      "type": "text",
+      "name": "cate",
+      "eleConfig ": {
+        "formEle": {
+          "placeholder": "商品分类",
+          "ng-model": "$parent.queryCATE",
+          "ng-change": "$parent.search('cate')"
+        }
+      }
+    },{
+      "type": "text",
+      "name": "brand",
+      "eleConfig ": {
+        "formEle": {
+          "placeholder": "销售季",
+          "ng-model": "$parent.querySEASON",
+          "ng-change": "$parent.search('season')"
+        }
+      }
+    },{
+      "type": "text",
+      "name": "series",
+      "eleConfig ": {
+        "formEle": {
+          "placeholder": "零售价",
+          "ng-model": "$parent.queryPRICE",
+          "ng-change": "$parent.search('price')"
+        }
+      }
+    },{
+      "type": "text",
+      "name": "goodname",
+      "eleConfig ": {
+        "formEle": {
+          "placeholder": "商品名称",
+          "ng-model": "$parent.queryGOODNAME",
+          "ng-change": "$parent.search('goodName')"
+        }
+      }
+    },{
+      "type": "text",
+      "name": "code",
+      "eleConfig ": {
+        "formEle": {
+          "placeholder": "商品编码",
+          "ng-model": "$parent.queryCODE",
+          "ng-change": "$parent.search('code')"
+        }
+      }
+    },{
+      "type": "btns",
+      "eleConfig": {
+        "formGroup":{
+          "class":"top-ctrl-btns"
+        },
+        "items": [{
+          "type": "button",
+          "class": "btn-default btn",
+          "text": "清空",
+          "ng-click":"$parent.resetTopCtrl()"
+        }, {
+          "type": "button",
+          "class": "btn-default btn",
+          "text": "高级查询"
+        },{
+          "type": "button",
+          "class": "btn-default btn",
+          "text": "查询"
+        }]
+      }
+    }
+  ]
+}

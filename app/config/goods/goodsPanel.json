@@ -1,0 +1,17 @@
+{
+  "data": [{
+    "type": "qs-panel",
+    "attr": {
+      "heading": "商品列表",
+      "colour": "default"
+    },
+    "table": {
+      "columnNameShow": [{"id":"id"},{"goodnum":"商品编号"},{"goodname":"商品名称"}],
+      "columnNameReal": "id,goodnum,goodname",
+      "pagination": {
+        "direction-links": "true",
+        "boundary-links": "true"
+      }
+    }
+  }]
+}

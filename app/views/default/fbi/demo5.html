@@ -1,0 +1,115 @@
+<div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">{{$title}}</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+
+</div>
+
+<div class="row">
+    <button class="btn btn-outline btn-default" ng-click="popoutDetail()">编辑</button>
+</div>
+
+<script type="text/ng-template" id="firstDialogId">
+    <div class="ngdialog-message">
+
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead>
+                        <tr>
+                            <th><input type="checkbox" ng-checked="selectAllLeft" ng-click="toggleSelectAllFunc()"></th>
+                            <th class="id">id<a ng-click="leftSortByFunc('id')"><i class="fa fa-sort"></i></a></th>
+                            <th class="goodnum">商品编号<a ng-click="leftSortByFunc('goodnum')"><i class="fa fa-sort"></i></a></th>
+                            <th class="goodname">商品名称<a ng-click="leftSortByFunc('goodname')"><i class="fa fa-sort"></i></a></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="item in pagedLeftItems[currentPageLeft-1] | orderBy:sortingOrderLeft:reverseLeft">
+                            <td><input type="checkbox" ng-checked="item.itemSelected" ng-click="toggleSelectOneFunc(item)"></td>
+                            <td>{{item.id}}</td>
+                            <td>{{item.goodnum}}</td>
+                            <td>{{item.goodname}}</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                <qs-pagination boundary-links="true" total-items="totalLeftItems" ng-model="currentPageLeft"
+                                               class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;"
+                                               first-text="&laquo;" last-text="&raquo;"
+                                               items-per-page="itemsPerPageLeft"></qs-pagination>
+                                <input class="form-control input-sm" type="number" ng-model="currentPageLeft"> / {{totalLeftItems}}
+                            </td>
+                        </tr>
+                        </tfoot>
+
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-lg-1">
+                <button class="btn btn-outline btn-default" ng-click="popoutAddWindow()">加商品</button>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead>
+                        <tr>
+                            <td><input type="checkbox" ng-checked="selectAllRight" ng-disabled="!selectAllRight" ng-click="cancelSelectAllFunc()"></td>
+                            <th class="id">id<a ng-click="rightSortByFunc('id')"><i class="fa fa-sort"></i></a></th>
+                            <th class="goodnum">商品编号<a ng-click="rightSortByFunc('goodnum')"><i class="fa fa-sort"></i></a></th>
+                            <th class="goodname">商品名称<a ng-click="rightSortByFunc('goodname')"><i class="fa fa-sort"></i></a></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="item in pagedRightItems[currentPageRight-1] | orderBy:sortingOrderRight:reverseRight">
+                            <td><input type="checkbox" ng-checked="item.itemSelected" ng-click="toggleSelectOneFunc(item)"></td>
+                            <td>{{item.id}}</td>
+                            <td>{{item.goodnum}}</td>
+                            <td>{{item.goodname}}</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                <qs-pagination boundary-links="true" total-items="totalRightItems" ng-model="currentPageRight"
+                                               class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;"
+                                               first-text="&laquo;" last-text="&raquo;"
+                                               items-per-page="itemsPerPageRight"></qs-pagination>
+                            </td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div align="center">
+            <button type="button" class="btn btn-outline btn-default" ng-click="selectItems()">保存</button>
+            <button type="button" class="btn btn-outline btn-default" ng-click="closeThisDialog()">取消</button>
+        </div>
+    </div>
+
+</script>
+
+<script  type="text/ng-template" id="secondDialogId">
+    <qs-panel colour="default">
+        <qs-panel-head>新增商品</qs-panel-head>
+        <qs-panel-body>
+            <label class="form-inline">商品编号：<input type="text" class="form-control" ng-model="$parent.$parent.goodsNum"></label><br />
+            <label class="form-inline">商品名称：<input type="text" class="form-control" ng-model="$parent.$parent.goodsName"></label><br />
+        </qs-panel-body>
+
+        <qs-panel-footer>
+            <div align="center">
+                <button type="button" class="btn btn-outline btn-default" ng-click="addGoods()">保存</button>
+                <button type="button" class="btn btn-outline btn-default" ng-click="closeThisDialog()">取消</button>
+            </div>
+        </qs-panel-footer>
+    </qs-panel>
+</script>

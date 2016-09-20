@@ -1,0 +1,81 @@
+.huge {
+    font-size: 40px;
+}
+.panel {
+    margin-bottom: 14px;
+    padding-bottom: 5px;
+}
+.panel-default{
+    border-color:transparent;
+    @panel-title-size:20px;
+    @panel-body-bg:#f9f9f9;
+    .panel-heading{
+        border-color:transparent;
+        background-color: @tab-ul-bg-active;
+        height:60px;
+        padding-left: 30px;
+        font-size:@panel-title-size;
+        color:@text-color!important;
+        small{
+            font-size: 12px;
+            color:@text-color-lightest;
+        }
+        .panel-title{
+            margin-bottom:10px;
+            margin-top:10px;
+        }
+    }
+    .panel-body {
+        background-color:@panel-body-bg ;
+        padding:0 30px 15px 30px;
+    }
+    .panel-head-separator{
+        color:@panel-head-separator-color;
+        margin:0 7px;
+        font-style:normal;
+    }
+}
+.panel-green {
+    border-color: @brand-success;
+    .panel-heading {
+        border-color: @brand-success;
+        color: white;
+        background-color: @brand-success;
+    }
+    a {
+        color: @brand-success;
+        &:hover {
+            color: darken(@brand-success, 15%);
+        }
+    }
+}
+
+.panel-red {
+    border-color: @brand-danger;
+    .panel-heading {
+        border-color: @brand-danger;
+        color: white;
+        background-color: @brand-danger;
+    }
+    a {
+        color: @brand-danger;
+        &:hover {
+            color: darken(@brand-danger, 15%);
+        }
+    }
+}
+
+.panel-yellow {
+    border-color: @brand-warning;
+    .panel-heading {
+        border-color: @brand-warning;
+        color: white;
+        background-color: @brand-warning;
+    }
+    a {
+        color: @brand-warning;
+        &:hover {
+            color: darken(@brand-warning, 15%);
+        }
+    }
+}

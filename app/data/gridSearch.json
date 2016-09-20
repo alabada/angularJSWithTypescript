@@ -1,0 +1,43 @@
+{
+  "data": [{
+    "type": "text",
+    "attr": {
+      "placeholder": "查找",
+      "directive": {
+        "ng-model": "$parent.queryString",
+        "ng-change": "$parent.search()"
+      }
+    },
+    "labeltext": "查找："
+  }, {
+    "type": "text",
+    "attr": {
+      "placeholder": "根据id查找",
+      "directive": {
+        "ng-model": "$parent.queryID",
+        "ng-change": "$parent.searchByID()"
+      }
+    },
+    "labeltext": "ID："
+  }, {
+    "type": "text",
+    "attr": {
+      "placeholder": "根据名字查找",
+      "directive": {
+        "ng-model": "$parent.queryName",
+        "ng-change": "$parent.searchByName()"
+      }
+    },
+    "labeltext": "名字："
+  }, {
+    "type": "text",
+    "attr": {
+      "placeholder": "根据电话查找",
+      "directive": {
+        "ng-model": "$parent.queryTelephone",
+        "ng-change": "$parent.searchByTelephone()"
+      }
+    },
+    "labeltext": "电话："
+  }]
+}

@@ -1,0 +1,68 @@
+<div class="qs-table-module">
+	<div class="col-xs-12 col-sm-6 col-md-8 sorting-container">
+		<div ng-if="sortingType && sort.fields.length">
+			排序:
+			<div ng-repeat="sortField in sort.fields" class="sorting-badge">
+				<span class="glyphicon" ng-class="{'glyphicon-chevron-down':sort.reverse[$index], 'glyphicon-chevron-up':!sort.reverse[$index]}"></span>
+				{{::sortField}}
+				<span class="glyphicon glyphicon-remove close" ng-click="removeSorting()"></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="form-group col-xs-12 col-sm-6 col-md-4" ng-if="search && 'separate'!=search">
+		<input type="text" placeholder="Search" ng-model="$parent.globalSearch" class="row pull-right form-control search" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }" ng-change="jumpToPage(1)"/>
+		<i class="glyphicon glyphicon-search search_icon"></i>
+	</div>
+
+	<div class="clearfix"></div>
+    <div class="back-cover">
+        <table class="table table-responsive table-bordered qs-table" ng-mousedown="resizeStart($event)" ng-mouseup="resizeEnd($event)">
+            <thead ng-if="!customHeader">
+                <tr>
+                    <th ng-if="select==='multiply'"><label><input type="checkbox" ng-checked="isAllSelected()" ng-click="toggleSelectAllFunc()"></label></th> <!-- thead中的checkbox -->
+                    <th ng-repeat="head in headers track by $index"
+                        ng-click="sortBy(fields[$index])"
+                        ng-class="headerIsSortedClass(head)"
+                        class="sortable">{{head}}<div ng-if="resize" class="resize"></div>
+                    </th>
+                </tr>
+            </thead>
+
+            <thead ng-if="!customHeader && 'separate'===search"> <!-- 针对有单列搜索栏 -->
+                <tr>
+                    <th ng-if="select==='multiply'"></th> <!-- thead中的checkbox -->
+                    <th ng-repeat="head in headers track by $index" class="separate">
+                        <i class="glyphicon glyphicon-search search_icon separate"></i>
+                        <input type="text" ng-model="columnSearch[fields[$index]]" placeholder="{{head}}..." class="form-control search separate" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }" ng-change="jumpToPage(1)"/>
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody ng-if="!findBody">
+                <tr id="rowTr" ng-click="setSelected(item)" ng-class="{'selected-row':isSelected(item)}"> <!-- <= will inject ng-repeat -->
+                    <!-- params: headers and fields -->
+                    <td ng-if="select==='multiply'"><input type="checkbox" ng-checked="isSelected(item)"></td> <!-- tbody中的单选框 -->
+                    <td ng-if="!editable" ng-repeat="field in fields">{{item[field]}}</td>
+                    <td ng-if="editable" editable ng-repeat="field in fields">
+                        <div contenteditable ng-model="item[field]">{{item[field]}}</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="loading" ng-show="dataIsLoading">
+        <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading Data...
+    </div>
+
+    <div ng-if="paging" style="text-align: right">
+        <oi-select oi-options="page for page in pageGroup" ng-model="$parent.itemsPerPage" ng-change="itemsPerPageChanged()" style="vertical-align: top; margin: 20px 20px; display: inline-block; min-width: 0px; width: 70px;">
+        </oi-select>
+        <ul uib-pagination total-items="totalItems" items-per-page="itemsPerPage" ng-model="$parent.currentPage" ng-change="pageChanged()" max-size="8" boundary-links="true" rotate="false" first-text="首页" previous-text="上一页" next-text="下一页" last-text="尾页"></ul>
+        <input class="form-control" max="{{((totalItems/itemsPerPage+0.499999)|number:0)==0?currentPage:((totalItems/itemsPerPage+0.499999)|number:0)}}" min="1" ng-model="curPage" style="vertical-align: top; margin: 20px 20px; display: inline-block; width: 70px" type="number" placeholder="请输入数字">
+        <button class="btn btn-outline btn-default" style="vertical-align: top; margin: 20px 20px; display: inline-block; width: 50px" ng-click="jumpToPage(curPage)">GO</button>
+    </div>
+
+    <div class="clearfix"></div>
+</div>

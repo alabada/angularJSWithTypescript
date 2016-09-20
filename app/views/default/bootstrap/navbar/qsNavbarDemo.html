@@ -1,0 +1,200 @@
+<h1 class="page-header">导航条</h1>
+
+<h3>默认样式的导航条</h3>
+
+<qs-navbar>
+    <qs-navbar-header>
+      <a href>商标</a>
+    </qs-navbar-header>
+
+    <qs-navbar-collapse>
+        <ul>
+          <li class="active"><a href navbar-link>链接1 <span class="sr-only">(current)</span></a></li>
+          <li><a href >链接2</a></li>
+          <li class="dropdown" qs-dropdown>
+            <a href class="dropdown-toggle" qs-dropdown-toggle>
+              点击我展开下拉!
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href>菜单选项1</a></li>
+              <li><a href>菜单选项2</a></li>
+              <li><a href>菜单选项3</a></li>
+              <li><a href>菜单选项4</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </qs-navbar-collapse>
+</qs-navbar>
+
+
+<h3>反色的导航条</h3>
+
+<qs-navbar inverse='true'> <!-- 添加inverse -->
+    <qs-navbar-header>
+      <a href>商标</a> <!-- 会为这个连接自动添加 'navbar-brand' class-->
+    </qs-navbar-header>
+
+    <qs-navbar-collapse>
+        <ul><!-- 会为这个ul 自动添加 'nav navbar-nav' 的class  -->
+          <li class="active"><a href>链接1 <span class="sr-only">(current)</span></a></li>
+          <li><a href>链接2</a></li>
+          <li class="dropdown" qs-dropdown>
+            <a href class="dropdown-toggle" qs-dropdown-toggle>
+              点击我展开下拉!
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href>菜单选项1</a></li>
+              <li><a href>菜单选项2</a></li>
+              <li><a href>菜单选项3</a></li>
+              <li><a href>菜单选项4</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="navbar-left"><!--会为form添加'navbar-form'的 class-->
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </qs-navbar-collapse>
+</qs-navbar>
+
+
+<h3>品牌图标</h3>
+
+<style>
+  .demo-navbar-brand-img{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .demo-navbar-brand-img:after {
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 100%;
+      vertical-align: middle;
+  }
+  .demo-navbar-brand-img img{
+    display:inline-block;
+    max-width: 100%;
+  }
+</style>
+
+
+<qs-navbar> 
+    <qs-navbar-header>
+      <a href class="demo-navbar-brand-img">
+        <img src="img/navbar_logo.png" alt="placeholder+image">
+      </a>
+    </qs-navbar-header>
+</qs-navbar>
+
+
+<h3>固定于项部,宽度100%的导航条</h3>
+<button class="btn btn-success" ng-click="isShowtop=!isShowtop">点击显示项部导航条</button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<qs-navbar  qs-navbar-fixed-top="true" ng-show="isShowtop" qs-navbar-fuild='true'>
+    <qs-navbar-header>
+      <a href>商标</a>
+    </qs-navbar-header>
+
+    <qs-navbar-collapse>
+        <ul>
+          <li class="active"><a href >链接1 <span class="sr-only">(current)</span></a></li>
+          <li><a href >链接2</a></li>
+          <li class="dropdown" qs-dropdown>
+            <a href class="dropdown-toggle" qs-dropdown-toggle>
+              点击我展开下拉!
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href>菜单选项1</a></li>
+              <li><a href>菜单选项2</a></li>
+              <li><a href>菜单选项3</a></li>
+              <li><a href>菜单选项4</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="navbar-right" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <ul>
+          <li><a href >链接3</a></li>
+          <li class="dropdown" qs-dropdown>
+            <a href class="dropdown-toggle" qs-dropdown-toggle>
+              点击我展开下拉!
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href>菜单选项1</a></li>
+              <li><a href>菜单选项2</a></li>
+              <li><a href>菜单选项3</a></li>
+              <li><a href>菜单选项4</a></li>
+            </ul>
+          </li>
+        </ul>
+    </qs-navbar-collapse>
+</qs-navbar>
+
+
+<h3>固定于底部的导航条</h3>
+<button class="btn btn-danger" ng-click="isShowbtm=!isShowbtm">点击显示底部导航条</button>
+
+<qs-navbar  qs-navbar-fixed-bottom="true" ng-show='isShowbtm'>
+    <qs-navbar-header>
+      <a href>商标</a>
+    </qs-navbar-header>
+
+    <qs-navbar-collapse>
+        <ul>
+          <li class="active"><a href >链接1 <span class="sr-only">(current)</span></a></li>
+          <li><a href >链接2</a></li>
+          <li class="dropup" qs-dropdown>
+            <a href class="dropdown-toggle" qs-dropdown-toggle>
+              点击我展开上拉!
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href>菜单选项1</a></li>
+              <li><a href>菜单选项2</a></li>
+              <li><a href>菜单选项3</a></li>
+              <li><a href>菜单选项4</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <ul class="navbar-right">
+          <li><a href >链接3</a></li>
+          <li class="dropup" qs-dropdown>
+            <a href class="dropdown-toggle" qs-dropdown-toggle>
+              点击我展开上拉!
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href>菜单选项1</a></li>
+              <li><a href>菜单选项2</a></li>
+              <li><a href>菜单选项3</a></li>
+              <li><a href>菜单选项4</a></li>
+            </ul>
+          </li>
+        </ul>
+    </qs-navbar-collapse>
+</qs-navbar>
+

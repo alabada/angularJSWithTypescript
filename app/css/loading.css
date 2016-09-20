@@ -1,0 +1,188 @@
+
+.loading-style-8{
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-animation: loading-style-8 3s linear infinite;
+    -moz-animation: loading-style-8 3s linear infinite;
+    -ms-animation: loading-style-8 3s linear infinite;
+    -o-animation: loading-style-8 3s linear infinite;
+    animation: loading-style-8 3s linear infinite;
+}
+.loading-style-8 div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.loading-style-8 span{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #99CC66;
+    position: absolute;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+    -webkit-animation: changeBgColor_8 3s ease infinite;
+    -moz-animation: changeBgColor_8 3s ease infinite;
+    -ms-animation: changeBgColor_8 3s ease infinite;
+    -o-animation: changeBgColor_8 3s ease infinite;
+    animation: changeBgColor_8 3s ease infinite;
+}
+@-webkit-keyframes loading-style-8{
+    0%{
+        -webkit-transform: rotate(0deg);
+    }
+    33.3%{
+        -webkit-transform: rotate(120deg);
+    }
+    66.6%{
+        -webkit-transform: rotate(240deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes loading-style-8{
+    0%{
+        -moz-transform: rotate(0deg);
+    }
+    33.3%{
+        -moz-transform: rotate(120deg);
+    }
+    66.6%{
+        -moz-transform: rotate(240deg);
+    }
+    100%{
+        -moz-transform: rotate(360deg);
+    }
+}
+@-ms-keyframes loading-style-8{
+    0%{
+        -ms-transform: rotate(0deg);
+    }
+    33.3%{
+        -ms-transform: rotate(120deg);
+    }
+    66.6%{
+        -ms-transform: rotate(240deg);
+    }
+    100%{
+        -ms-transform: rotate(360deg);
+    }
+}
+@-o-keyframes loading-style-8{
+    0%{
+        -o-transform: rotate(0deg);
+    }
+    33.3%{
+        -o-transform: rotate(120deg);
+    }
+    66.6%{
+        -o-transform: rotate(240deg);
+    }
+    100%{
+        -o-transform: rotate(360deg);
+    }
+}
+@keyframes loading-style-8{
+    0%{
+        transform: rotate(0deg);
+    }
+    33.3%{
+        transform: rotate(120deg);
+    }
+    66.6%{
+        transform: rotate(240deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes changeBgColor_8{
+    0%,100%{
+        background: #99CC66;
+    }
+    33.3%{
+        background: #FFFF66;
+    }
+    66.6%{
+        background: #FF6666;
+    }
+}
+@-moz-keyframes changeBgColor_8{
+    0%,100%{
+        background: #99CC66;
+    }
+    33.3%{
+        background: #FFFF66;
+    }
+    66.6%{
+        background: #FF6666;
+    }
+}
+@-ms-keyframes changeBgColor_8{
+    0%,100%{
+        background: #99CC66;
+    }
+    33.3%{
+        background: #FFFF66;
+    }
+    66.6%{
+        background: #FF6666;
+    }
+}
+@-o-keyframes changeBgColor_8{
+    0%,100%{
+        background: #99CC66;
+    }
+    33.3%{
+        background: #FFFF66;
+    }
+    66.6%{
+        background: #FF6666;
+    }
+}
+@keyframes changeBgColor_8{
+    0%,100%{
+        background: #99CC66;
+    }
+    33.3%{
+        background: #FFFF66;
+    }
+    66.6%{
+        background: #FF6666;
+    }
+}
+.loading-style-8 div:nth-child(2){
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+    transform: rotate(120deg);
+}
+.loading-style-8 div:nth-child(3){
+    -webkit-transform: rotate(240deg);
+    -moz-transform: rotate(240deg);
+    -ms-transform: rotate(240deg);
+    -o-transform: rotate(240deg);
+    transform: rotate(240deg);
+}
+.loading-style-8 div:nth-child(2) span{
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -ms-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.loading-style-8 div:nth-child(3) span{
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    -ms-animation-delay: 2s;
+    -o-animation-delay: 2s;
+    animation-delay: 2s;
+}

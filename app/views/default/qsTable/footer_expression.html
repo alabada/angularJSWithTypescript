@@ -1,0 +1,27 @@
+<h2>Footer expressions</h2>
+<p>aggregate functions in footer</p>
+
+<table qs-table
+       data="data"
+       items-per-page="10"
+       total-items="totalItems"
+       headers="Name, Age,Money"
+       fields="name,age,money"
+       search="separate"
+       selected-model="report.selectedUser"
+>
+    <tfoot>
+    <tr>
+        <td>Total users:{{$filtered.length}}</td>
+        <td></td>
+        <td>Total balance:{{ $owner.getTotalBalance($filtered) }} $</td>
+    </tr>
+    </tfoot>
+    <tbody>
+    <tr>
+        <td>{{::item.name}}</td>
+        <td>{{::item.age}}</td>
+        <td editable>{{item.money}}</td>
+    </tr>
+    </tbody>
+</table>

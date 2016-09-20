@@ -1,0 +1,42 @@
+<h2>Resizable table columns</h2>
+
+<table qs-table
+       interface="interface"
+       data="data1"
+       items-per-page="10"
+       total-items="totalItems1"
+       headers="Name, Eye color, Age,Balance,Company,Home address,Favorite Fruit"
+       fields="name,eyeColor,age,balance,company,address,favoriteFruit"
+       resize="true">
+</table>
+<hr>
+
+<table qs-table
+       interface="interface"
+       data="data1"
+       items-per-page="10"
+       total-items="totalItems1"
+       headers="Name, Eye color, Age"
+       fields="name,eyeColor,age"
+       select="multiply"
+       resize="true">
+    <thead ng-mousedown="resizeStart($event)" ng-mouseup="resizeEnd($event)">
+    <tr>
+        <th>
+            <span class="glyphicon glyphicon-user"></span>
+            Name of Person
+            <div class="resize"></div>
+        </th>
+        <th>
+            <span class="glyphicon glyphicon-eye-open"></span>
+            Eye
+            <div class="resize"></div>
+        </th>
+        <th>
+            <span class="glyphicon glyphicon-gift"></span>
+            Age
+            <div class="resize"></div>
+        </th>
+    </tr>
+    </thead>
+</table>

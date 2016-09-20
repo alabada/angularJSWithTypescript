@@ -1,0 +1,17 @@
+<div id="wrapper" >
+    <!-- Navigation -->
+    <header></header>
+    <!-- /.navbar-top-links -->
+    <!-- /.navbar-static-side -->
+    <div id="page-wrapper" data-ng-class="[isIndex?'index-page':'main-page' , 'clearfix']">
+        <!-- <qs-tab  data-close-flag="true" ></qs-tab> -->
+
+         <ul class="nav nav-tabs" id="myTab">
+            <li ng-repeat="tab in tabs" ng-class="{true: 'active'}[tabTitle==tab.label]">
+                <a ng-click="qs_on(tab.label)" ui-sref="{{tab.href}}">{{tab.label}}</a>
+                <i ng-if="tab.href!='fbc.home'"  ng-click="qs_off($index,tab.href,tabTitle==tab.label)" class="close">&times;</i>
+        </ul>
+        <div ui-view></div>
+    </div>
+    <!-- /#page-wrapper -->
+</div>

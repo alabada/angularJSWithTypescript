@@ -1,0 +1,39 @@
+{
+  "data": [{
+    "type": "button",
+    "attr": {
+      "class": "btn btn-outline btn-default",
+      "directive": {
+        "ng-click": "$parent.addRowFuc()"
+      }
+    },
+    "labeltext": "新增"
+  }, {
+    "type": "button",
+    "attr": {
+      "class": "btn btn-outline btn-default",
+      "directive": {
+        "ng-click": "$parent.delRowFuc()"
+      }
+    },
+    "labeltext": "删除"
+  }, {
+    "type": "button",
+    "attr": {
+      "class": "btn btn-outline btn-default",
+      "directive": {
+        "ng-click": "$parent.modifyRowFuc()"
+      }
+    },
+    "labeltext": "修改"
+  }, {
+    "type": "button",
+    "attr": {
+      "class": "btn btn-outline btn-default",
+      "directive": {
+        "ng-click": "$parent.viewRowFuc()"
+      }
+    },
+    "labeltext": "查看"
+  }]
+}

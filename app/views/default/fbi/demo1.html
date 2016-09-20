@@ -1,0 +1,34 @@
+<div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">{{$title}}</h2>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+<div  class="row">
+
+    <qs-input>
+        <div qs-dropdown type="btn">
+            <button type="button" class="btn btn-primary dropdown-toggle" qs-dropdown-toggle>
+                <span class="caret"></span>
+            </button>
+        </div>
+        <input type="text" class="form-control" placeholder="Search for..." value="{{demo1.currentNode.roleName}}">
+    </qs-input>
+
+    <div style="width:210px;border:1px;height:230px;OVERFLOW: auto; ">
+
+    <div
+            data-angular-treeview="true"
+            data-tree-id="demo1"
+            data-tree-model="datademo1"
+            data-node-id="roleId"
+            data-node-label="roleName"
+            data-node-children="children">
+    </div>
+    </div>
+</div>
+    <!-- /.panel -->
+
+</div>

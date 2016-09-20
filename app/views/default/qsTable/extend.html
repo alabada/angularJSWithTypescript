@@ -1,0 +1,28 @@
+<h2>Extend</h2>
+
+<table qs-table
+       interface="interface"
+       data="data1"
+       items-per-page="10"
+       total-items="totalItems1"
+       select="multiply"
+       drag-columns="true"
+       headers="Name, Eye color, Age, Balance, Company, Favorite Fruit"
+       fields="name, eyeColor, age, balance, company, favoriteFruit">
+
+
+    <tbody>
+    <tr>
+        <td>{{::item.name}}</td>
+        <td>
+            <div class="{{::item.eyeColor}} eye"></div>
+            {{::item.eyeColor}}
+        </td>
+        <td>{{::item.age}}</td>
+        <td style="background-color:rgb(212, 255, 227)">{{::item.balance}}</td>
+        <td>{{::item.company}}</td>
+        <td>{{::item.favoriteFruit}}</td>
+    </tr>
+    </tbody>
+
+</table>

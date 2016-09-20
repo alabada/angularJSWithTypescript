@@ -1,0 +1,15 @@
+<h1 class="page-header">徽章</h1>
+
+<h2>徽章Demo示范</h2>
+<!-- 指令 -->
+<a href qs-badge = '42'>链接</a>
+<!-- 原来已存在 badge的情况 -->
+<button class="btn btn-primary" type="button" qs-badge ="12">按钮<span class="badge">4</span></button>
+
+<!-- 用输入值改变 -->
+<hr>
+在此输入徽章的值&nbsp;:&nbsp;<input type="text"  ng-model = "buttonBadge" >
+&nbsp;&nbsp;&nbsp;&nbsp;<button data-ng-click="badgeSh = !badgeSh" class="btn-danger btn">显示/隐藏徽章</button>
+<br>
+<!-- 控制badge显示 -->
+<button class="btn btn-primary"  type="button" qs-badge ="{{buttonBadge}}"  qs-badge-hide='{{badgeSh}}' >动态的按钮</button>

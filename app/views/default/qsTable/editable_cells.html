@@ -1,0 +1,39 @@
+<h2>Editable cells (all)</h2>
+
+<table qs-table
+       interface="interface"
+       data="data1"
+       items-per-page="10"
+       total-items="totalItems1"
+       headers="Name, Eye color, Age,Balance,Company,Home address,Favorite Fruit"
+       fields="name,eyeColor,age,balance,company,address,favoriteFruit"
+       sorting="compound"
+       select="multiply"
+       editable="true">
+</table>
+<hr>
+
+<h2>Editable duble column (Eye color,age)</h2>
+
+<table qs-table
+       interface="interface"
+       data="data1"
+       items-per-page="10"
+       total-items="totalItems1"
+       headers="Name, Eye color, Age, Balance, Company, Home address, Favorite Fruit"
+       fields="name, eyeColor, age, balance, company, address, favoriteFruit"
+       sorting="compound">
+    <tbody>
+    <tr>
+        <td>{{::item.name}}</td>
+        <td editable>{{item.eyeColor}}</td>
+        <td editable>{{::item.age}}</td>
+        <td>{{::item.balance}}</td>
+        <td>{{::item.company}}</td>
+        <td>{{::item.address}}</td>
+        <td>{{::item.favoriteFruit}}</td>
+    </tr>
+    </tbody>
+</table>
+<hr>
+

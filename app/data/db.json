@@ -1,0 +1,275 @@
+{
+  "brand": [
+    {
+      "id": 1,
+      "roleName": "品牌",
+      "roleId": "role1",
+      "children": [
+        {
+          "id": 2,
+          "roleName": "拉萨贝尔",
+          "roleId": "role11",
+          "children": []
+        },
+        {
+          "id": 3,
+          "roleName": "欧耐力Ochitly",
+          "roleId": "role12",
+          "children": []
+        },
+        {
+          "id": 4,
+          "roleName": "其他",
+          "roleId": "role2",
+          "children": [
+            {
+              "id": 5,
+              "roleName": "361",
+              "roleId": "role5",
+              "children": []
+            },
+            {
+              "id": 6,
+              "roleName": "七匹狼",
+              "roleId": "role6",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "goods": [
+    {
+      "id": 1,
+      "brandId": 2,
+      "goodnum": "LYQ5566",
+      "goodname": "连衣裙"
+    },
+    {
+      "id": 2,
+      "brandId": 2,
+      "goodnum": "BBSQ7788",
+      "goodname": "半身裙"
+    },
+    {
+      "id": 3,
+      "brandId": 2,
+      "goodnum": "XFLYQ1122",
+      "goodname": "雪纺连衣裙"
+    },
+    {
+      "id": 4,
+      "brandId": 2,
+      "goodnum": "DDQ3344",
+      "goodname": "长袖连衣裙"
+    },
+    {
+      "id": 5,
+      "brandId": 2,
+      "goodnum": "PPQ4455",
+      "goodname": "蕾丝裙"
+    },
+    {
+      "id": 6,
+      "brandId": 2,
+      "goodnum": "PPQ4456",
+      "goodname": "吊带裙"
+    },
+    {
+      "id": 7,
+      "brandId": 3,
+      "goodnum": "PPQ4457",
+      "goodname": "蓬蓬裙"
+    },
+    {
+      "id": 8,
+      "brandId": 3,
+      "goodnum": "PPQ4458",
+      "goodname": "哈哈裙"
+    },
+    {
+      "id": 9,
+      "brandId": 3,
+      "goodnum": "PPQ4458",
+      "goodname": "嘻哈裙"
+    },
+    {
+      "id": 10,
+      "brandId": 3,
+      "goodnum": "PPQ4458",
+      "goodname": "牛仔裤"
+    },
+    {
+      "id": 11,
+      "brandId": 3,
+      "goodnum": "PPQ4458",
+      "goodname": "紧身裤 "
+    },
+    {
+      "id": 12,
+      "brandId": 4,
+      "goodnum": "PPQ4458",
+      "goodname": "丁字裤"
+    },
+    {
+      "id": 13,
+      "brandId": 4,
+      "goodnum": "PPQ4458",
+      "goodname": "超短裤"
+    },
+    {
+      "id": 14,
+      "brandId": 4,
+      "goodnum": "PPQ4458",
+      "goodname": "泳衣裤"
+    },
+    {
+      "id": 15,
+      "brandId": 4,
+      "goodnum": "PPQ4458",
+      "goodname": "拉拉裤"
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "lzh",
+      "password": "asd123",
+      "email": "lzh@lzh.com",
+      "remark": "lzh是个酷酷的孩子",
+      "passwordrepeat": "asd123"
+    },
+    {
+      "name": "als",
+      "password": "111111",
+      "email": "lzh@lzh.com",
+      "remark": "lzh是个酷酷的孩子",
+      "id": 2,
+      "passwordrepeat": "111111"
+    },
+    {
+      "name": "wdh",
+      "password": "dfasdf",
+      "email": "wdh@wdh.com",
+      "remark": "wdh",
+      "id": 3,
+      "passwordrepeat": 123456
+    },
+    {
+      "name": "lOGIN123login",
+      "password": "asd123",
+      "email": "lzh@lzh.com",
+      "remark": "lzh是个酷酷的孩子",
+      "id": 5,
+      "passwordrepeat": "asd123"
+    },
+    {
+      "name": "JoanthanNAO123",
+      "password": "asd123",
+      "email": "lzh@lzh.com",
+      "remark": "l测试了吗阿斯顿发斯蒂芬阿斯顿发啥地方阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发",
+      "id": 6,
+      "passwordrepeat": "asd123"
+    },
+    {
+      "name": "Jonathan12345",
+      "password": "asd123",
+      "passwordrepeat": "asd123",
+      "email": "123123@qq.com",
+      "remark": "发士大夫",
+      "id": 11
+    },
+    {
+      "name": "wen",
+      "password": "wenwen",
+      "passwordrepeat": "wenwen",
+      "email": "wen@qishon.com",
+      "remark": "sss",
+      "id": 12
+    }
+  ],
+  "user-detail": [
+    {
+      "id": 1,
+      "userId": 1,
+      "sex": "男",
+      "age": 18,
+      "qq": 1249913118,
+      "describe": "我是一只小小鸟，想要飞啊飞啊飞不高，寻寻觅觅，寻寻觅觅，温暖的怀抱，想要的你，太高。。。我是一只小小鸟，想要飞啊，飞啊飞不高。。。"
+    }
+  ],
+  "notes": [
+    {
+      "name": 123456,
+      "content": "阿斯蒂芬",
+      "id": 1
+    },
+    {
+      "name": 123,
+      "content": 123,
+      "id": 2
+    },
+    [],
+    {
+      "name": 123,
+      "content": 123,
+      "id": 4
+    },
+    {
+      "name": 123,
+      "content": 132,
+      "id": 5
+    }
+  ],
+  "clients": [
+    {
+      "id": 2,
+      "name": 4,
+      "age": 4,
+      "email": 2,
+      "password": 2,
+      "remark": 2
+    },
+    {
+      "name": "lOGIN123login",
+      "password": "asd123",
+      "email": "lzh@lzh.com",
+      "remark": "lzh是个酷酷的孩子",
+      "id": 5,
+      "passwordrepeat": "asd123"
+    },
+    {
+      "name": "JoanthanNAO123",
+      "password": "asd123",
+      "email": "lzh@lzh.com",
+      "remark": "alksdj jagja",
+      "id": 6,
+      "passwordrepeat": "asd123"
+    },
+    {
+      "id": 7,
+      "name": 7,
+      "age": 77,
+      "email": 7,
+      "password": 7,
+      "remark": 7
+    },
+    {
+      "id": 8,
+      "name": 8,
+      "age": 8,
+      "email": 8,
+      "password": 8,
+      "remark": 8
+    },
+    {
+      "id": 9,
+      "name": 9,
+      "age": 9,
+      "email": 9,
+      "password": 9,
+      "remark": 9
+    }
+  ]
+}

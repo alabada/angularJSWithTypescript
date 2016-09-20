@@ -1,0 +1,36 @@
+<div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">旋转木马</h1>
+        </div>
+    </div>
+    <div>
+        <div style="height: 305px">
+            <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                    <img ng-src="{{slide.image}}" style="margin:auto;">
+                    <div class="carousel-caption">
+                        <h4>Slide {{slide.id}}</h4>
+                        <p>{{slide.text}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <button type="button" class="btn btn-info" ng-click="addSlide()">增加轮播图片随机选择图片</button>
+                <button type="button" class="btn btn-info" ng-click="randomize()">随机选择图片</button>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="noWrapSlides"> 是否禁用循环
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                轮播间隔（毫秒):
+                <input type="number" class="form-control" ng-model="myInterval">
+                <br />轮播间隔输入0或负数停止轮播.
+            </div>
+        </div>
+    </div>
+</div>

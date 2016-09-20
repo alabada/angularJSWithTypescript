@@ -1,0 +1,69 @@
+{
+  "clients": [
+    {
+      "id": 2,
+      "name": 4,
+      "age": 4,
+      "email": 2,
+      "password": 2,
+      "remark": 2
+    },
+    {
+      "name": "lOGIN123login",
+      "password": "asd123",
+      "email": "lzh@lzh.com",
+      "remark": "lzh是个酷酷的孩子",
+      "id": 5,
+      "passwordrepeat": "asd123"
+    },
+    {
+      "name": "JoanthanNAO123",
+      "password": "asd123",
+      "email": "lzh@lzh.com",
+      "remark": "alksdj jagja",
+      "id": 6,
+      "passwordrepeat": "asd123"
+    },
+    {
+      "id": 7,
+      "name": 7,
+      "age": 77,
+      "email": 7,
+      "password": 7,
+      "remark": 7
+    },
+    {
+      "id": 8,
+      "name": 8,
+      "age": 8,
+      "email": 8,
+      "password": 8,
+      "remark": 8
+    },
+    {
+      "id": 9,
+      "name": 9,
+      "age": 9,
+      "email": 9,
+      "password": 9,
+      "remark": 9
+    }
+  ],
+  "user-detail": [
+    {
+      "id": 1,
+      "userId": 1,
+      "sex": "男",
+      "age": 18,
+      "qq": 1249913118,
+      "describe": "我是一只小小鸟，想要飞啊飞啊飞不高，寻寻觅觅，寻寻觅觅，温暖的怀抱，想要的你，太高。。。我是一只小小鸟，想要飞啊，飞啊飞不高。。。"
+    }
+  ],
+  "notes": [
+    {
+      "name": 123456,
+      "content": "阿斯蒂芬",
+      "id": 1
+    }
+  ]
+}

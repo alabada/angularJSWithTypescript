@@ -1,0 +1,113 @@
+.sidebar {
+    background-color:@sidebar-bg;
+    .sidebar-nav.navbar-collapse {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.sidebar .sidebar-search {
+    margin: 15px;
+/*     display:table; */
+    input{
+        background-color: @body-bg;
+        border-color:@sidebar-link-color;
+        border-radius: 16px;
+        &.form-control:focus {
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(red(@sidebar-link-color),green(@sidebar-link-color),blue(@sidebar-link-color), 0.5);
+        }
+    }
+}
+.sidebar .abn-tree li {
+    a{
+        padding:14px;
+        font-size: 16px;
+        color:@sidebar-link-color;
+        &>span{
+            i{
+                font-size:22px;
+                margin-right: 5px;
+                vertical-align: middle;
+            }
+        }
+
+    }
+}
+.sidebar ul li {
+    border-bottom: 1px solid @border-color;
+    a {
+        &.active {
+            background-color: @gray-lighter;
+        }
+    }
+}
+
+.sidebar .arrow {
+    float: right;
+}
+
+.sidebar .fa.arrow:before {
+    content: "\f104";
+}
+
+.sidebar .active > a > .fa.arrow:before {
+    content: "\f107";
+}
+
+.sidebar .abn-tree li{
+    &.level-1{
+        i.tree-icon{
+            font-size: 10px;
+            float:right;
+            padding: 15px;
+            margin-top: -10px;
+            margin-right: -14px;
+        }
+    }
+    &.level-2{
+        padding-left:36px;
+        a{
+            font-size: 14px;
+            padding: 10px;
+        }
+    }
+    a{
+        &:hover,&:acitve{
+            background-color: @orange;
+            color:#fff;
+            transition: all 0.3s ease-out;
+        }
+    }
+    &.active {
+        a{
+            background-color: @sidebar-active-bg;
+            margin-left:5px;
+            margin-right:-5px;
+            transition: all 0.3s ease-out;
+        }
+        &:before{
+            content: "";
+            display: block;
+            position: absolute;
+            background-color:@sidebar-gray-darker;
+            width: 5px;
+            height: 100%;
+        }
+    }
+
+}
+
+@media(min-width:768px) {
+    .sidebar {
+        z-index: 1;
+        position: absolute;
+        width: 328px;
+        margin-top: @navbar-height + 1px;
+    }
+
+    .navbar-top-links .dropdown-messages,
+    .navbar-top-links .dropdown-tasks,
+    .navbar-top-links .dropdown-alerts {
+        margin-left: auto;
+    }
+}

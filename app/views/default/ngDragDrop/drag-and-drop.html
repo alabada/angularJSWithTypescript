@@ -1,0 +1,20 @@
+<div class="btn btn-primary"  ng-click="save(thumbnails)">保存</div>
+<div class="btn btn-primary"  ng-click="edit()">编辑</div>
+<div class="row" class="sortable-container grid" sv-root sv-part="thumbnails">
+    <div ng-repeat="thumbnail in thumbnails">
+        <div class="col-xs-6 col-md-3" sv-element>
+            <div class="thumbnail">
+              <img ng-src="{{thumbnail.img}}" alt="{{thumbnail.alt}}">
+              <div class="caption">
+                  <h3>{{thumbnail.title}}</h3>
+                  <p>
+                      {{thumbnail.content}}
+                  </p>
+                  <p>
+                      <a href class="btn btn-primary" role="button">添加到购物车</a>
+                  </p>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

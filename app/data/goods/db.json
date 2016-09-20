@@ -1,0 +1,112 @@
+{
+  "brand": [
+    {
+      "id":1,
+      "roleName": "品牌",
+      "roleId": "role1",
+      "children": [
+        {
+          "id":2,
+          "roleName": "拉萨贝尔",
+          "roleId": "role11",
+          "children": []
+        },
+        {
+          "id":3,
+          "roleName": "欧耐力Ochitly",
+          "roleId": "role12",
+          "children": []
+        },
+        {
+          "id":4,
+          "roleName": "其他",
+          "roleId": "role2",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "goods": [
+    {
+      "id":1,"brandId":2,"goodnum":"LYQ5566","goodname":"连衣裙"
+    }, {
+      "id":2,"brandId":2,"goodnum":"BBSQ7788","goodname":"半身裙"
+    },{
+      "id":3,"brandId":3,"goodnum":"XFLYQ1122","goodname":"雪纺连衣裙"
+    },{
+      "id":4,"brandId":2,"goodnum":"DDQ3344","goodname":"长袖连衣裙"
+    },{
+      "id":5,"brandId":4,"goodnum":"PPQ4455","goodname":"蕾丝裙"
+    },{
+      "id":6,"brandId":2,"goodnum":"PPQ4456","goodname":"吊带裙"
+    },{
+      "id":7,"brandId":4,"goodnum":"PPQ4457","goodname":"蓬蓬裙"
+    },{
+      "id":8,"brandId":3,"goodnum":"PPQ4458","goodname":"哈哈裙"
+    },{
+      "id":9,"brandId":2,"goodnum":"PPQ4458","goodname":"嘻哈裙"
+    },{
+      "id":10,"brandId":2,"goodnum":"PPQ4458","goodname":"牛仔裤"
+    },{
+      "id":11,"brandId":4,"goodnum":"PPQ4458","goodname":"紧身裤 "
+    },{
+      "id":12,"brandId":3,"goodnum":"PPQ4458","goodname":"嘻哈裙"
+    },{
+      "id":13,"brandId":2,"goodnum":"PPQ4458","goodname":"超短裤"
+    },{
+      "id":14,"brandId":2,"goodnum":"PPQ4458","goodname":"泳衣裤"
+    },{
+      "id":15,"brandId":4,"goodnum":"PPQ4458","goodname":"嘻哈裙"
+    },{
+      "id":16,"brandId":4,"goodnum":"PPQ4458","goodname":"超短裤"
+    },{
+      "id":17,"brandId":3,"goodnum":"PPQ4458","goodname":"泳衣裤"
+    },{
+      "id":18,"brandId":3,"goodnum":"PPQ4458","goodname":"紧身裤"
+    },{
+      "id":19,"brandId":2,"goodnum":"PPQ4458","goodname":"嘻哈裙"
+    },{
+      "id":20,"brandId":2,"goodnum":"PPQ4458","goodname":"泳衣裤"
+    },{
+      "id":21,"brandId":4,"goodnum":"PPQ4458","goodname":"嘻哈裙"
+    },{
+      "id":22,"brandId":3,"goodnum":"PPQ4458","goodname":"紧身裤"
+    },{
+      "id":23,"brandId":2,"goodnum":"PPQ4458","goodname":"嘻哈裙"
+    },{
+      "id":24,"brandId":2,"goodnum":"PPQ4458","goodname":"马裤"
+    },{
+      "id":25,"brandId":4,"goodnum":"PPQ4458","goodname":"牛仔裤"
+    },{
+      "id":26,"brandId":4,"goodnum":"PPQ4458","goodname":"嘻哈裙"
+    },{
+      "id":27,"brandId":3,"goodnum":"PPQ4458","goodname":"紧身裤 "
+    },{
+      "id":28,"brandId":3,"goodnum":"PPQ4458","goodname":"沙滩裤"
+    },{
+      "id":29,"brandId":2,"goodnum":"PPQ4458","goodname":"牛仔裤"
+    },{
+      "id":30,"brandId":2,"goodnum":"PPQ4458","goodname":"马裤"
+    },{
+      "id":31,"brandId":4,"goodnum":"PPQ4458","goodname":"嘻哈裙"
+    },{
+      "id":32,"brandId":3,"goodnum":"PPQ4458","goodname":"牛仔裤"
+    },{
+      "id":33,"brandId":2,"goodnum":"PPQ4458","goodname":"嘻哈裙"
+    },{
+      "id":34,"brandId":2,"goodnum":"PPQ4458","goodname":"紧身裤 "
+    },{
+      "id":35,"brandId":4,"goodnum":"PPQ4458","goodname":"沙滩裤"
+    },{
+      "id":36,"brandId":4,"goodnum":"PPQ4458","goodname":"马裤"
+    },{
+      "id":37,"brandId":3,"goodnum":"PPQ4458","goodname":"沙滩裤"
+    },{
+      "id":38,"brandId":3,"goodnum":"PPQ4458","goodname":"紧身裤 "
+    },{
+      "id":39,"brandId":2,"goodnum":"PPQ4458","goodname":"嘻哈裙"
+    },{
+      "id":40,"brandId":2,"goodnum":"PPQ4458","goodname":"马裤"
+    }
+  ]
+}

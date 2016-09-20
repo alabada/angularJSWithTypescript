@@ -1,0 +1,60 @@
+<h2>Custom rows and headers pattern:</h2>
+
+<table object-table 
+	data="data"
+	data="exportDataVariable"
+	display="10"
+	fields="name,age,money"
+	headers="Name,Age,$$$"
+>
+<thead style="background-color:yellow">
+	<tr>
+		<th ng-click="$owner.test()" style="background-color: rgb(68, 184, 231)">Name..(click me)</th>
+		<th style="background-color: rgb(229, 102, 229)">Age</th>
+		<th style="background-color: rgb(196, 196, 196)">Money $</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td style="background-color: rgb(206, 241, 255);">{{::item.name}}</td>
+		<td style="background-color: rgb(255, 201, 255)">{{::item.age}}</td>
+		<td style="background-color: rgb(247, 247, 247)">{{::item.money}} <span class="badge">USD</span></td>
+	</tr>
+</tbody>
+</table>
+<hr>
+
+<!-- CODE -->
+<h3>In template:</h3>
+<textarea style="width: 500px; height: 200px">
+	<table  object-table 
+			data="data" 
+			data="exportDataVariable" 
+			display="10" 
+			fields="name,age,money" 
+			headers="Name,Age,$$$">
+		<thead style="background-color:yellow">
+			<tr>
+				<th ng-click="$owner.test()" style="background-color: rgb(68, 184, 231)">Name..(click me)</th>
+				<th style="background-color: rgb(255, 201, 255)">Age</th>
+				<th style="background-color: rgb(247, 247, 247)">Money $</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td style="background-color: rgb(206, 241, 255);">{{::item.name}}</td>
+				<td style="background-color: rgb(254, 153, 254)">{{::item.age}}</td>
+				<td style="background-color: rgb(224, 224, 224)">
+				{{::item.money}} <span class="badge">USD</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</textarea>
+
+<div class="bs-callout bs-callout-primary">
+	<h4>Notice:</h4>
+	<code>$owner</code> is a link to Controller
+</div>

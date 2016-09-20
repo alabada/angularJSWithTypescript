@@ -1,0 +1,151 @@
+
+<!-- 临时的样式 -->
+<style>
+    .demo-form{
+        margin-top: 30px;
+    }
+</style>
+<!--end 临时的样式 -->
+
+
+<!-- 
+    html: app/views/default/w5c/qsW5cdemo.html
+    controller : app/js/controller/w5c/W5cDemoController.js 
+-->
+<form class="form-horizontal w5c-form demo-form col-xs-6 col-xs-offset-3" 
+    role="form"
+    w5c-form-validate="vali.validateOptions" 
+    w5c-form-validate-rules = "vali.valiRules"
+    novalidate 
+    name="validateForm">
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">邮箱</label>
+        <div class="col-sm-10">
+            <input type="email" name="testemail" ng-model="vali.layoutData.testemail" required="" class="form-control"
+                   placeholder="输入邮箱">
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">用户名</label>
+
+        <div class="col-sm-10">
+            <input required="" ng-pattern="/^[A-Za-z]{1}[0-9A-Za-z_]{1,19}$/" ng-model="vali.layoutData.name"
+                   w5c-unique-check="{url:'http://www.ngnice.com/api/test/user/name/check?name='+vali.layoutData.name}"
+                   class="form-control" name="testusername" placeholder="输入用户名（输入why520crazy验证存在）">
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">密码</label>
+
+        <div class="col-sm-10">
+            <input type="password" required="" ng-model="vali.layoutData.password" name="password"
+                   class="form-control" ng-minlength="5" ng-maxlength="15"
+                   placeholder="输入密码">
+        </div>
+    </div>customizer
+
+
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">重复密码</label>
+
+        <div class="col-sm-10">
+            <input type="password" required="" w5c-repeat="password" ng-model="vali.layoutData.repeatPassword"
+                   name="repeatPassword"
+                   class="form-control"
+                   placeholder="重复密码">
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">数字</label>
+
+        <div class="col-sm-10">
+            <input type="number" required="" ng-model="vali.layoutData.number" name="number" class="form-control"
+                   placeholder="输入数字（10-15）" max="15" min="10">
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">自定义验证</label>
+
+        <div class="col-sm-10">
+            <!--associate 为关联元素，即关联元素发生变化时触发此处验证-->
+            <input type="number" w5c-customizer="vali.customizer()" associate="number" ng-model="vali.layoutData.customizer" name="customizer" class="form-control"
+                   placeholder="数字必须大于上面输入的数字">
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">URL</label>
+
+        <div class="col-sm-10">
+            <input type="url" required="" ng-model="vali.layoutData.url" name="url" class="form-control"
+                   placeholder="输入URL">
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">下拉框</label>
+
+        <div class="col-sm-10">
+            <select  class="form-control" ng-model="vali.layoutData.multipleType" required name="multipleType"
+                    ng-options="type.text for type in vali.types">
+                <option value="">---请选择---</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="col-sm-2">是否可用</label>
+        <div class="col-sm-10">
+            <label class="radio-inline">
+                <input type="radio" ng-model="vali.layoutData.isAvailable"  value="Y" ng-checked="true"> 可用
+            </label>
+            <label class="radio-inline">
+                <input type="radio" ng-model="vali.layoutData.isAvailable"  value="N"> 不可用
+            </label>
+        </div>
+    </div>
+
+
+
+    <div class="form-group" ng-show="validateForm.$errors.length > 0 && vali.showErrorType == 2">
+        <label class="col-sm-2 control-label"></label>
+
+        <div class="col-sm-10">
+            <div class="alert alert-danger">
+                <ui>
+                    <li ng-repeat="error in validateForm.$errors track by $index">
+                        {{error}}
+                    </li>
+                </ui>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="button" w5c-form-submit="vali.savelayoutData($event)" class="btn btn-success"> 验证</button>
+            <button type="button" ng-click="validateForm.reset()" class="btn btn-default">清空</button>
+        </div>
+    </div>
+</form>
+<!-- end  html: app/views/default/w5c/qsW5cdemo.html -->
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- meta -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no"/><!--去掉拨号链接-->
+	<meta name="renderer" content="webkit">
+	<!-- title -->
+	<title ng-bind="'启尚WEB3.0-'+$title">启尚科技</title>
+<!--收藏，浏览器title图标-->
+	<link href="favicon.ico" mce_href="favicon.ico" rel="bookmark" type="image/x-icon" />
+	<link href="favicon.ico" mce_href="favicon.ico" rel="icon" type="image/x-icon" />
+	<link href="favicon.ico" mce_href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	
+
+	<!-- 初始的载入动画 -->
+    <link rel="stylesheet" href="css/pre-loading.css" id='preload-css'> 
+    <!--用于切换的样式-->
+	<link rel="stylesheet"  ng-href="{{themeColor}}" id='main-style'>
+
+	<!-- Custom Fonts -->
+	
+
+	<link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="bower_components/angular-loading-bar/src/loading-bar.css" rel="stylesheet" type="text/css">
+	<!-- script -->
+	<script data-main="main.js" src="bower_components/requirejs/require.js"  charset="utf-8" ></script>
+	<!-- Bootstrap Core JavaScript -->
+	<!-- <script src="bower_components/jquery/dist/jquery.js"></script> -->
+	<!-- <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script> -->
+	<!--[if lt IE 9]>
+	<script src="asset/js/html5shiv.js"></script>
+	<script src="asset/js/respond.min.js"></script>
+	<![endif]-->
+	<!--[if lte IE 8]>
+	<script type="text/javascript">
+		alert('您的浏览器版本太低了');
+		window.opener=null;
+		window.open('','_self','');window.close();
+	</script>
+	<![endif]-->
+	<script src="asset/js/json2.js"></script>
+	<script src="asset/js/Chart.js"></script>
+<script>
+	var theme = "default";
+</script>
+	<link href="asset/css/sweetalert.css" rel="stylesheet">
+	<link href="css/qsChart.css" rel="stylesheet">
+	<link href="css/loading.css" rel="stylesheet">
+	<link href="css/object-table-style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- <div id="pre-loading">
+        <div class="loading-img-cont">
+            <img src="img/oval.svg" width="50" class='loading-img'>    
+            <p>&ensp;载入中,请稍后...</p>
+        </div>
+    </div> -->
+  <div  ui-view></div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<div>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <qs-panel colour="default">
+                <qs-panel-head>
+                    销售周报
+                </qs-panel-head>
+                <qs-panel-body>
+                    <div class="row">
+                        <canvas width="3" height="1" qs-chart-line chart-options="lineOptions" chart-data="lineData"></canvas>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <canvas width="1" height="1" qs-chart-doughnut chart-options="doughnut1Options" chart-data="doughnut1Data"></canvas>
+                            <h4 style="text-align: center">本月销售额<br>3,123,121</h4>
+                        </div>
+                        <div class="col-lg-4">
+                            <canvas width="1" height="1" qs-chart-doughnut chart-options="doughnut2Options" chart-data="doughnut2Data"></canvas>
+                            <h4 style="text-align: center">本月订单数<br>74,335</h4>
+                        </div>
+                        <div class="col-lg-4">
+                            <canvas width="1" height="1" qs-chart-doughnut chart-options="doughnut3Options" chart-data="doughnut3Data"></canvas>
+                            <h4 style="text-align: center">本月定制订单<br>1,573,989</h4>
+                        </div>
+                    </div>
+                </qs-panel-body>
+            </qs-panel>
+        </div>
+        <div class="col-lg-4">
+            <qs-panel colour="default">
+                <qs-panel-head>
+                    销售业绩趋势
+                </qs-panel-head>
+                <qs-panel-body>
+                    <div class="row">
+                        <canvas qs-chart-bar chart-options="barOptions1" chart-data="barData1"></canvas>
+                    </div>
+                </qs-panel-body>
+            </qs-panel>
+
+            <br>
+            <br>
+            <qs-panel colour="default">
+                <qs-panel-head>
+                    订单增长趋势
+                </qs-panel-head>
+                <qs-panel-body>
+                    <div class="row">
+                        <canvas qs-chart-bar chart-options="barOptions2" chart-data="barData2"></canvas>
+                    </div>
+                </qs-panel-body>
+            </qs-panel>
+        </div>
+    </div>
+
+</div>

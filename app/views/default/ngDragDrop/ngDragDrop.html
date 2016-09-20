@@ -1,0 +1,97 @@
+<h1 class="page-header">拖拽实现删除功能</h1>
+<div class="span6">
+    <div ng-repeat="list in list1" class="btn btn-primary"  ng-hide="!list.title" drag drag-include="'dragItemTemplate'" drag-model="list">{{list.title}}</div>
+</div>
+<span draggable>Drag ME</span>
+<br>
+
+<style type="text/css">
+    .dragdrop-item-controller {
+        position: absolute;
+        visibility: hidden
+    }
+</style>
+
+<script type="text/ng-template" id="dragItemTemplate">
+    <div style="box-shadow: 5px 5px 10px 0px #656565; ">
+        <img src="{{value.data.img}}"/>
+
+        <div style="position: absolute;top:0px;left: 0px;background: rgba(255,255,255,0.8);width: 100%">
+            {{value.data.title}}
+        </div>
+    </div>
+</script>
+
+<div class="container-fluid">
+    <div style="width: 200px;float: left;margin-top: 1em">
+        <h1 class="ui-widget-header" style="width: 200px;margin: 0;padding: 0;">购物车</h1>
+        <div class="ui-widget-content" style="margin: 0;padding: 0;">
+            <ol data-drop="true" ng-model='list4' style="margin: 0;padding: 1em 0 1em 3em;" dropable drop-callback="endDrop">
+                <li ng-repeat="item in itemsDrop track by $index" ng-show="item.title"  >{{item.title}}</li>
+                <li class="placeholder" ng-hide="hideMe()">Add your items here</li>
+            </ol>
+        </div>
+    </div>
+    <br>
+    <div class="row" >
+      <!--  <ul>
+            <li >-->
+        <!---->
+        <div >
+                <div ng-repeat="thumbnail in thumbnails" class="col-xs-6 col-md-3" draggable clone="true" drag-data="thumbnail" >
+            <!-- 指令的位置 -->
+                    <qs-thumbnail imgsrc="{{thumbnail.img}}" imgalt="{{thumbnail.alt}}" >
+                        <h3>{{thumbnail.title}}</h3>
+                        <p>
+                            {{thumbnail.content}}
+                        </p>
+                        <p>
+                            <a href class="btn btn-primary" role="button">添加到购物车</a>
+                        </p>
+                    </qs-thumbnail>
+               </div>
+        </div>
+            <!--</li>
+        </ul>-->
+    </div>
+    <div class="dragItem">
+
+    </div>
+<!--    <div ng-controller="DragAndDropController">
+        <div ng-repeat='(key, value) in items' ng-controller="DragAndDropItemController" ng-init="init(value)"
+             class="dragdrop-item-controller" >
+            <div style="width: 100%" ng-include src="value.include">
+
+            </div>
+        </div>
+    </div>-->
+
+    <style>
+        .btn-droppable { width: 180px; height: 30px; padding-left: 4px; }
+        .btn-draggable { width: 160px; }
+    </style>
+    <div>
+        <h2>orderBy Filter with ngRepeat</h2>
+        <div class='contentWrapper ng-cloak'>
+            <div class='content'>
+                <div class="row-fluid">
+                    <ul class="thumbnails">
+                        <li class="span3" style='margin-left:10px;' ng-repeat="item in list2">
+                            <div class="btn btn-droppable" data-drop="true" ng-model='list2' jqyoui-droppable="{index: {{$index}}}">
+                                <div class="btn btn-info btn-draggable" ng-show="item.title" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="list2" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">{{item.title}}</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-inner">
+            <div class="container form-inline" style="text-align: center;">
+                <div class="btn btn-droppable" ng-repeat="item in list3 | orderBy : 'title'" data-drop="true" ng-model='list3' jqyoui-droppable="{index: {{$index}}, applyFilter: 'filterIt'}">
+                    <div class="btn btn-info btn-draggable" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="list3" jqyoui-draggable="{index: {{$index}},animate:true, applyFilter: 'filterIt'}" ng-hide="!item.title">{{item.title}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

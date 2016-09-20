@@ -1,0 +1,137 @@
+{
+  "brand": [
+    {
+      "id": 1,
+      "roleName": "品牌",
+      "roleId": "role1",
+      "children": [
+        {
+          "id": 2,
+          "roleName": "拉萨贝尔",
+          "roleId": "role11",
+          "children": [
+            {
+              "id": 1,
+              "brandId": 2,
+              "goodnum": "LYQ5566",
+              "goodname": "连衣裙",
+              "roleName": "连衣裙"
+            },
+            {
+              "id": 2,
+              "brandId": 2,
+              "goodnum": "BBSQ7788",
+              "goodname": "半身裙",
+              "roleName": "半身裙"
+            },
+            {
+              "id": 3,
+              "brandId": 2,
+              "goodnum": "XFLYQ1122",
+              "goodname": "雪纺连衣裙",
+              "roleName": "雪纺连衣裙"
+            },
+            {
+              "id": 4,
+              "brandId": 2,
+              "goodnum": "DDQ3344",
+              "goodname": "长袖连衣裙",
+              "roleName": "长袖连衣裙"
+            },
+            {
+              "id": 5,
+              "brandId": 2,
+              "goodnum": "PPQ4455",
+              "goodname": "蕾丝裙",
+              "roleName": "蕾丝裙"
+            },
+            {
+              "id": 6,
+              "brandId": 2,
+              "goodnum": "PPQ4456",
+              "goodname": "吊带裙",
+              "roleName": "吊带裙"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "roleName": "欧耐力Ochitly",
+          "roleId": "role12",
+          "children": [
+            {
+              "id": 7,
+              "brandId": 3,
+              "goodnum": "PPQ4457",
+              "goodname": "蓬蓬裙",
+              "roleName": "蓬蓬裙"
+            },
+            {
+              "id": 8,
+              "brandId": 3,
+              "goodnum": "PPQ4458",
+              "goodname": "哈哈裙",
+              "roleName": "哈哈裙"
+            },
+            {
+              "id": 9,
+              "brandId": 3,
+              "goodnum": "PPQ4458",
+              "goodname": "嘻哈裙",
+              "roleName": "嘻哈裙"
+            },
+            {
+              "id": 10,
+              "brandId": 3,
+              "goodnum": "PPQ4458",
+              "goodname": "牛仔裤",
+              "roleName": "牛仔裤"
+            },
+            {
+              "id": 11,
+              "brandId": 3,
+              "goodnum": "PPQ4458",
+              "goodname": "紧身裤",
+              "roleName": "紧身裤"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "roleName": "其他",
+          "roleId": "role2",
+          "children": [
+            {
+              "id": 12,
+              "brandId": 4,
+              "goodnum": "PPQ4458",
+              "goodname": "丁字裤",
+              "roleName": "丁字裤"
+            },
+            {
+              "id": 13,
+              "brandId": 4,
+              "goodnum": "PPQ4458",
+              "goodname": "超短裤",
+              "roleName": "超短裤"
+            },
+            {
+              "id": 14,
+              "brandId": 4,
+              "goodnum": "PPQ4458",
+              "goodname": "泳衣裤",
+              "roleName": "泳衣裤"
+            },
+            {
+              "id": 15,
+              "brandId": 4,
+              "goodnum": "PPQ4458",
+              "goodname": "拉拉裤",
+              "roleName": "拉拉裤"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

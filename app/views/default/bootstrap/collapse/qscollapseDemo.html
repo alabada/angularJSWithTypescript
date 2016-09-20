@@ -1,0 +1,13 @@
+<h1>折叠</h1>
+
+
+<button type="button" class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Toggle collapse Vertically</button>
+<hr>
+<div uib-collapse="isCollapsed">
+    <div class="well well-lg">Some content</div>
+</div>
+<button type="button" class="btn btn-default" ng-click="isCollapsedHorizontal = !isCollapsedHorizontal">Toggle collapse Horizontally</button>
+<hr>
+<div uib-collapse="isCollapsedHorizontal" horizontal>
+    <div class="well well-lg">Some content</div>
+</div>

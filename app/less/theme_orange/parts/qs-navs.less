@@ -1,0 +1,28 @@
+.nav{
+    &.nav-tabs{
+        @color:#ccc;
+        li.sh-close{
+            a{
+                padding-right: 25px;
+            }
+        }
+        a{
+            font-size: 14px;
+            margin-right:.5em;
+            padding-right:2.2em;
+            &+i.close{
+                color: #1d1c1c;
+                font-size: 26px;
+                line-height: 30px;
+                padding: 3px;
+                position: absolute;
+                margin-top: -37px;
+                right: 5px;
+                font-weight: 100;
+                &:hover{
+                    color:darken(@color,30%);
+                }
+            }
+        }
+    }
+}

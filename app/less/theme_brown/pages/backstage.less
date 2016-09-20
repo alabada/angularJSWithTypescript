@@ -1,0 +1,192 @@
+#page-wrapper.index-page{
+  background:none;
+  padding:0 100px;
+  .panel-default{
+    .panel-heading{
+      background-color: #fff;
+    }
+    .panel-body{
+      background-color: #fff;
+    }
+  }
+  .Shortcuts{
+    .panel-body{
+      padding: 0;
+      padding-bottom: 25px;
+      margin-top: 30px;
+    } 
+    ul{
+      margin: 0;
+    }
+    li{
+      width: 20%;
+      height: 127px;
+      text-align: center;
+      float: left;
+      &+li{
+        border-left: 1px solid @border-color;
+      }
+      a{
+        color:@text-color;
+        &:hover,&:active,&:focus{
+          text-decoration:none;
+        }
+        font-size: 20px;
+      }
+      i{
+        display: block;
+        height: 80px;
+        line-height: 80px;
+        font-size: 57px;
+      }
+    }
+  }
+  .work-remind{
+    padding-bottom: 20px;
+    .angle-ctrl{
+      display: inline-block;
+      height: 120px;
+      width: 66px;
+      line-height: 120px;
+      font-size: 68px;
+      position: absolute;
+      text-align: center;
+      color:#b8b1ad;
+      &.left{
+        text-align: left;
+      }
+      &.right{
+        margin-left: -66px;
+        text-align: right;
+      }
+    }
+    .remind-cont{
+      display: inline-block;
+      width: 100%;
+      padding: 0 66px;
+    }
+    li{
+      width: 25%;
+      float:left;
+      span{
+        display: block;
+        font-size: 12px;
+        text-align:left;
+        padding: 0 2em;
+        &:nth-child(1){
+          color:@pink;
+        }
+        &:nth-child(2){
+          font-size: 45px;
+          text-align: center;
+          padding: 0;
+          text-color:@text-color-dark;
+        }
+        &:nth-child(3){
+          color:@text-color-light;
+        }
+      }
+    }
+  }
+  .actives-remind{
+    .panel-activity{
+      h4 i {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        vertical-align: baseline;
+        background-color: #ff6b6b;
+        margin-right: 10px;
+        margin-bottom: 3px;
+      }
+    }
+    .activity-detail-cont{
+      margin-left: 3px;
+      padding:5px 0 2px 12px ;
+      border-left: 1px dashed @border-color;
+      color:@text-color-light;
+      p.info{
+        color:@text-color-lightest;
+        span+span{
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+
+
+  .last-order{
+    
+    .panel-body>ul{
+      padding-left: 53px;
+      padding-right: 0;
+      >li{
+        position: relative;
+        color:@text-color;
+        p{
+          padding-right: 60px;
+          &:last{
+            color:@text-color-light;
+            span{
+              margin-right: 5px;
+            }
+          }
+        }
+        &:last-child{
+          border:none;
+        }
+        &:nth-child(1) .last-order-ico,
+        &:nth-child(2) .last-order-ico,
+        &:nth-child(3) .last-order-ico{
+          background-color: @pink;
+        }
+        &:last-child{
+          .separator{
+            border-bottom: none;
+          }
+        }
+      }
+      .time{
+        color:@text-color-lightest;
+      }
+      .see{
+        position: absolute;
+        right: 38px;
+        top: 10px;
+        color:@text-color-lightest;
+      }
+      .separator{
+        width: 100%;
+        height: 0;
+        border-bottom: 1px solid @border-color;
+        margin-left: -40px;
+        margin-bottom: 10px;
+      }
+    }
+   .last-order-ico{
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      font-size: 18px;
+      color:#fff;
+      margin-left: -50px;
+      background-color: @yellow-darken;
+   }
+
+  }
+
+
+  .sales-chart{
+    h5{
+      color:@text-color-light;
+    }
+    .qs-chart-legend{
+      list-style:none;
+    }
+  }
+}

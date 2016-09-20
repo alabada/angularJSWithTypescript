@@ -1,0 +1,126 @@
+<h3>文件上传：
+    <small>Powerfull upload module</small>
+</h3>
+<div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="panel">
+                    <div class="panel-body">
+                        <h4 class="page-header mt0">拖拽上传</h4>
+                        <div class="up-buttons">
+                            <div ngf-select ngf-drop ng-model="files" ngf-model-invalid="invalidFiles"
+                                 ng-model-options="modelOptionsObj"
+                                 ngf-multiple="true" ngf-pattern="pattern" ngf-accept="acceptSelect"
+                                 ng-disabled="disabled" ngf-capture="capture"
+                                 ngf-drag-over-class="dragOverClassObj"
+                                 ngf-validate="validateObj"
+                                 ngf-resize="resizeObj"
+                                 ngf-resize-if="resizeIfFn($file, $width, $height)"
+                                 ngf-dimensions="dimensionsFn($file, $width, $height)"
+                                 ngf-duration="durationFn($file, $duration)"
+                                 ngf-keep="keepDistinct ? 'distinct' : keep"
+                                 ngf-fix-orientation="orientation"
+                                 ngf-allow-dir="allowDir" class="drop-box" ngf-drop-available="dropAvailable">Select File
+                                <span ng-show="dropAvailable"> or Drop File</span>
+                            </div>
+                            <br/>
+                            <div ngf-drop ng-model="files" ngf-model-invalid="invalidFiles"
+                                 ng-model-options="modelOptionsObj"
+                                 ngf-multiple="multiple" ngf-pattern="'image/*'"
+                                 ng-disabled="disabled"
+                                 ngf-drag-over-class="dragOverClassObj"
+                                 ngf-validate="validateObj"
+                                 ngf-resize="resizeObj"
+                                 ngf-resize-if="resizeIfFn($file, $width, $height)"
+                                 ngf-dimensions="dimensionsFn($file, $width, $height)"
+                                 ngf-duration="durationFn($file, $duration)"
+                                 ngf-keep="keepDistinct ? 'distinct' : keep"
+                                 ngf-enable-firefox-paste="true"
+                                 ngf-fix-orientation="orientation"
+                                 ngf-allow-dir="allowDir" class="drop-box" ng-show="dropAvailable">
+                                <span>Paste or Drop Image from browser</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-bottom: 40px" class="col-md-9">
+                <div class="panel">
+                    <div class="panel-body">
+                        <p ng-if="files.length" class="pull-right label label-info">文件个数: {{ files.length }}</p>
+                        <h4 class="page-header mt0">上传文件列表：</h4>
+                        <p ng-if="!files.length" class="lead text-center">请先选择文件！！！</p>
+                        <div ng-if="files.length">
+                            <table ng-if="files.length" class="table" >
+                                <thead>
+                                <tr>
+                                    <th style="text-align: center">文件名</th>
+                                    <th style="text-align: center">缩略图</th>
+                                    <th style="text-align: center">大小</th>
+                                    <th style="text-align: center">进度</th>
+                                    <th style="text-align: center">状态</th>
+                                    <th style="text-align: center">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="item in files">
+                                    <td style="text-align: center">
+                                        <strong>{{ item.name }}</strong>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <img ng-show="item.$valid" ngf-thumbnail="item" class="thumb">
+                                    </td>
+                                    <td style="text-align: center">{{ item.size/1024/1024|number:2 }} MB</td>
+                                    <td style="text-align: center">
+                                        <div style="margin-bottom: 0;" class="progress progress-xs">
+                                            <div role="progressbar" ng-style="{ 'width': item.progress + '%' }" class="progress-bar">{{item.progress}}%</div>
+                                        </div>
+                                    </td>
+                                    <td class="text-center" style="text-align: center">
+                                             <span ng-show="item.isSuccess">
+                                                <!--<em class="fa fa-check fa-fw"></em>-->
+                                                 上传成功！
+                                             </span>
+                                             <span ng-show="item.isCancel">
+                                                <!--<em class="fa fa-ban-circle fa-fw"></em>-->
+                                                 取消上传！
+                                             </span>
+                                             <span ng-show="item.isError">
+                                                <!--<em class="fa fa-times fa-fw"></em>-->
+                                                 上传失败！
+                                             </span>
+                                    </td>
+                                    <td nowrap="" style="text-align: center">
+                                        <button type="button" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess" class="btn btn-info btn-xs">
+                                            <span class="icon-cloud-upload mr"></span>上传</button>
+                                        <!-- <button type="button" ng-click="item.cancel()" ng-disabled="!item.isUploading" class="btn btn-warning btn-xs">
+                                             <span class="icon-close mr"></span>Cancel</button>-->
+                                        <button type="button" ng-click="item.remove($index)" class="btn btn-danger btn-xs">
+                                            <span class="icon-trash mr"></span>删除</button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-body">
+                        <!--<div>
+                            <p>文件上传进度:</p>
+                            <div style="" class="progress progress-xs">
+                                <div role="progressbar" ng-style="{ 'width': files.progress + '%' }" class="progress-bar"></div>
+                            </div>
+                        </div>-->
+                        <button type="button" ng-click="uploadAll()" ng-disabled="!files.length" class="btn btn-info btn-s">
+                            <span class="icon-cloud-upload mr"></span>Upload all</button>
+                        <!-- <button type="button" ng-click="cancelAll()" ng-disabled="files.isUploading" class="btn btn-warning btn-s">
+                             <span class="icon-close mr"></span>Cancel all</button>-->
+                        <button type="button" ng-click="clearQueue()" ng-disabled="!files.length" class="btn btn-danger btn-s">
+                            <span class="icon-trash mr"></span>Remove all</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

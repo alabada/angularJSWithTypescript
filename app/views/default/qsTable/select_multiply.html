@@ -1,0 +1,75 @@
+<h2>多选案例</h2>
+<table qs-table
+       interface="interface"
+       data="data"
+       items-per-page="10"
+       total-items="totalItems"
+       headers="Age, full Name"
+       fields="age,name"
+       sorting="simple"
+       search="false"
+       select="multiply"
+       selected-model="report.selectedPerson"
+></table>
+
+<p>已被选择条目:</p>
+<textarea style="width: 400px; height: 200px">
+    {{report.selectedPerson}}
+</textarea>
+<hr>
+
+<hr>
+<h2>自定义多选</h2>
+<table qs-table
+       interface="interface"
+       data="data1"
+       items-per-page="10"
+       total-items="totalItems1"
+       headers="Name, Eye color, Age, Balance, Company, Home address, Favorite Fruit"
+       fields="name, eyeColor, age, balance, company, address, favoriteFruit"
+       search="false"
+       select="multiply"
+       selected-model="report.selectedPeople"
+>
+    <tbody>
+    <tr>
+        <td>{{::item.name}}</td>
+        <td editable>{{item.eyeColor}}</td>
+        <td>{{::item.age}}</td>
+        <td>{{::item.balance}}</td>
+        <td>{{::item.company}}</td>
+        <td>{{::item.address}}</td>
+        <td>{{::item.favoriteFruit}}</td>
+    </tr>
+    </tbody>
+</table>
+
+<p>已被选择条目:</p>
+<textarea style="width: 400px; height: 200px">
+    {{report.selectedPeople}}
+</textarea>
+<hr>
+
+<hr>
+<h2>单击行附加操作</h2>
+<table qs-table
+       interface="interface"
+       data="data1"
+       items-per-page="10"
+       total-items="totalItems1"
+       headers="Name, Eye color, Age, Balance, Company, Home address, Favorite Fruit"
+       fields="name, eyeColor, age, balance, company, address, favoriteFruit"
+       search="false"
+>
+    <tbody>
+    <tr ng-click="$owner.showItem(item);setSelected(item)">
+        <td>{{::item.name}}</td>
+        <td editable>{{item.eyeColor}}</td>
+        <td>{{::item.age}}</td>
+        <td>{{::item.balance}}</td>
+        <td>{{::item.company}}</td>
+        <td>{{::item.address}}</td>
+        <td>{{::item.favoriteFruit}}</td>
+    </tr>
+    </tbody>
+</table>

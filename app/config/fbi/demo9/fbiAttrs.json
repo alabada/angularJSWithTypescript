@@ -1,0 +1,88 @@
+{
+  "overallEleConfig": {
+    "label": {
+      "class ": "col-lg-3 col-md-3"
+    },
+    "formEleCont": {
+      "class": "col-lg-9 col-md-9"
+    }
+  },
+  "formAttrs":{
+    "class":"form-horizontal"
+  },
+  "formLayout": [{
+    "type":"ph",
+    "name":"title1",
+    "template":"<h3>面料属性</h3>"
+  },{
+    "name": "itemNO",
+    "eleConfig": {
+      "label": {
+        "text": "面料货号"
+      },
+      "formEle": {
+        "ng-pattern": "/^[0-9A-Za-z_]{0,20}$/",
+        "w5c-unique-check": "{url:'http://www.ngnice.com/api/test/user/name/check?name='+vali.entity.name}"
+      }
+    },
+    "valiRule": {
+      "pattern": "20个字符以内，限数字与字母",
+      "w5cuniquecheck": "货号必须唯一"
+    }
+  },{
+    "type": "radio",
+    "name": "classes",
+    "eleConfig": {
+      "label": {
+        "text": "织物类型",
+        "class": "col-md-3 text-right col-lg-3"
+      },
+      "items": {
+        "subLabel": {
+          "class": "radio-inline"
+        }
+      }
+    },
+    "data": [{
+      "text": "针织",
+      "value": "knit"
+    },{
+      "text": "梭织",
+      "value": "woven"
+    }, {
+      "text": "毛织",
+      "value": "Wool"
+    }, {
+      "text": "毛呢",
+      "value": "barret"
+    }, {
+      "text": "非织",
+      "value": "nonWoven"
+    }]
+  },{
+    "name": "fbiName",
+    "eleConfig": {
+      "label": {
+        "text": "面料名称"
+      },
+      "formEle": {
+        "ng-pattern": "/^[0-9A-Za-z_]{0,20}$/"
+      }
+    }
+  },{
+    "type":"ph",
+    "template":"<p><span>颜色+成分+材质，最多20个字</span>例如：白色锦纶蕾丝</p>"
+  }
+
+
+
+  
+
+
+
+
+
+
+
+  ]
+}

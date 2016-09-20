@@ -1,0 +1,30 @@
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom:0">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" ui-sref="dashboard.home" href>启尚ISS3.0</a>
+    </div>
+    <!-- /.navbar-header -->
+    <header-notification></header-notification>
+    <!-- 主题切换 -->
+    <ul class="theme-ul nav navbar-right">
+        <li  data-ng-repeat="li in themeColors"
+             data-ng-class="[li.color?'theme-'+li.color:null,li.active?'active':null]"
+             data-ng-click="changeTheme(li.color,$index)"
+             class="theme-li"
+             data-idx="{{$index+1}}">
+            {{li.color}}
+        </li>
+    </ul>
+    <!-- 主题切换 -->
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse" uib-collapse="isCollapsed">
+
+        <qs-tree tree-data="qs_data" tree-control="qs_tree" on-select="qs_tree_handler(branch)" expand-level="2" initial-selection="仪表盘"></qs-tree>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,64 @@
+<h1>工具提示</h1>
+<div class="form-group">
+    <label>工具提示的位置</label>
+    <select class="form-control" ng-model="placement.selected" ng-options="o as o for o in placement.options"></select>
+</div>
+<button tooltip-placement="{{placement.selected}}" uib-tooltip="On the {{placement.selected}}" type="button" class="btn btn-default">Tooltip {{placement.selected}}</button>
+<hr />
+<div class="form-group">
+    <label>提示的文本</label>
+    <input type="text" ng-model="dynamicTooltipText" class="form-control">
+</div>
+<div class="form-group">
+    <label>动态提示文本的内容</label>
+    <input type="text" ng-model="dynamicTooltip" class="form-control">
+</div>
+<p>
+    &emsp;&emsp;围城故事发生于1920到1940年代
+    <a href="#" uib-tooltip="{{dynamicTooltip}}">{{dynamicTooltipText}}</a>, 主角方鸿渐是个从中国南方乡绅家庭走出的青年人，迫于家庭压力与
+    <a href="#" tooltip-animation="false" uib-tooltip="I don't fade. :-(">fading</a> 同乡周家女子订亲。但在其上大学期间，周氏患病早亡。准岳父周先生被方所写的唁电感动，资助他出国求学。
+方鸿渐在欧洲游学期间，不理学业。为了给家人一个交待，
+    <a href="#" tooltip-popup-delay='1000' uib-tooltip='appears with delay'>show delay</a> 方于毕业前购买了虚构的“克莱登大学”的博士学位证书，并随海外学成的学生回国。在船上与留学生鲍小姐相识并热恋，但被鲍小姐欺骗感情。同时也遇见了大学同学苏文纨。
+    <a href="#" tooltip-popup-close-delay='1000' uib-tooltip='hides with delay'>hide delay</a>  到达上海后，在已故未婚妻父亲周先生开办的银行任职。此时，方获得了同学苏文纨的青睐，又与苏的表妹唐晓芙一见钟情，整日周旋于苏、唐二人之间，期间并结识了追求苏文纨的赵辛楣。
+    <a href="#" uib-tooltip-template="'myTooltipTemplate.html'">Custom template</a> 方最终与苏、唐二人感情终结，苏嫁与诗人曹元朗，而赵也明白方并非其情敌，从此与方惺惺相惜。
+</p>
+<p>
+    包含html块的堤示. <a href="#" uib-tooltip-html="htmlTooltip">Check me out!</a>
+</p>
+<p>
+    <style>
+    /* Specify styling for tooltip contents */
+    
+    .tooltip.customClass .tooltip-inner {
+        color: #880000;
+        background-color: #ffff66;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    }
+    /* Hide arrow */
+    
+    .tooltip.customClass .tooltip-arrow {
+        display: none;
+    }
+    </style>
+    自定的class <a href="#" uib-tooltip="I can have a custom class applied to me!" tooltip-class="customClass">Check me out!</a>
+</p>
+<div class="form-group">
+    <label>自定触发方式, 如 focus: </label>
+    <input type="text" value="Click me!" uib-tooltip="See? Now click away..." tooltip-trigger="'focus'" tooltip-placement="right" class="form-control" />
+</div>
+<div class="form-group" ng-class="{'has-error' : !inputModel}">
+    <label>添加触发条件:</label>
+    <input type="text" ng-model="inputModel" class="form-control" placeholder="鼠标hover悬停于这个输入框上并输入框内有内容时关闭提示" uib-tooltip="输入框内有内容时关闭提示" tooltip-placement="top" tooltip-trigger="'mouseenter'" tooltip-enable="!inputModel" />
+</div>
+<div class="form-group">
+    <label>
+        激活工具提示 <span uib-tooltip="Hello!" tooltip-is-open="tooltipIsOpen" tooltip-placement="top">使用其它元素触发的方式</span>
+    </label>
+    <button ng-click="tooltipIsOpen = !tooltipIsOpen">切换工具提示</button>
+</div>
+
+
+<!-- 模版 -->
+<script type="text/ng-template" id="myTooltipTemplate.html">
+    <span>Special Tooltip with <strong>markup</strong> and {{ dynamicTooltipText }}</span>
+</script>

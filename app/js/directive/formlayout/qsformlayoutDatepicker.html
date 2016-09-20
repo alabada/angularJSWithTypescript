@@ -1,0 +1,18 @@
+<div class="form-group ">
+    <label class="control-label qs-formlayout-label">日期选择</label>
+    <div class="qs-formlayout-ele-cont">
+      <div class="input-group">
+          <input type="text" class="form-control qs-formlayout-datepicker" 
+            is-open = "formEleData.datapiker.opened"
+            qs-formlayout-datepicker-settoday
+          />
+          <span class="input-group-btn">
+            <button type="button"
+                    class="btn btn-default qs-formlayout-datepicker-btn"
+                    ng-click="formEleData.datapiker.openDatepicker($event)">
+                <span class="glyphicon glyphicon-calendar"></span>
+          </button>
+          </span>
+      </div>  
+    </div>
+</div>

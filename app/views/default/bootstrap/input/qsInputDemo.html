@@ -1,0 +1,68 @@
+<div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">输入框组</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+
+    <h1>输入框示例</h1>
+
+    <!-- size: lg,sm
+        span中的type: addon, btn
+    -->
+
+    <h3>input 输入框基本示例</h3>
+    <qs-input size="lg">
+        <span type="addon">@</span>
+        <input type="text" class="form-control" placeholder="Username">
+    </qs-input>
+
+    <qs-input size="sm">
+        <input type="text" class="form-control" placeholder="Recipient's username">
+        <span type="addon">@example.com</span>
+    </qs-input>
+
+    <h3>作为额外元素的多选框和单选框</h3>
+    <qs-input>
+        <span type="addon">
+            <input type="checkbox">
+        </span>
+        <input type="text" class="form-control">
+    </qs-input>
+
+    <qs-input>
+        <span type="addon">
+            <input type="radio">
+        </span>
+        <input type="text" class="form-control">
+    </qs-input>
+
+    <h3>作为额外元素的按钮 注意此时type得是btn</h3>
+    <qs-input>
+        <span type="btn">
+            <button class="btn btn-default" type="button">Go!</button>
+        </span>
+        <input type="text" class="form-control" placeholder="Search for...">
+    </qs-input>
+
+    <h3>作为额外元素的按钮式下拉菜单</h3>
+    <qs-input>
+        <div qs-dropdown type="btn">
+            <button type="button" class="btn btn-primary dropdown-toggle" qs-dropdown-toggle>
+                Action
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+        <input type="text" class="form-control" placeholder="Search for...">
+    </qs-input>
+
+
+</div>

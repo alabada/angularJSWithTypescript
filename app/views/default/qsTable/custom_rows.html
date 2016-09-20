@@ -1,0 +1,48 @@
+<h2>Rows pattern</h2>
+
+<table qs-table
+       interface="interface"
+       data="data1"
+       items-per-page="10"
+       total-items="totalItems1"
+       headers="Name, Eye color, Age,Balance,Company,Home address,Favorite Fruit"
+       fields="name,eyeColor,age,balance,company,address,favoriteFruit"
+       sorting="compound"
+>
+    <tbody>
+    <tr>
+        <td>{{::item.name}}</td>
+        <td>{{::item.eyeColor}}</td>
+        <td>{{::item.age}}</td>
+        <td style="background-color:rgb(212, 255, 227)">{{::item.balance}}</td>
+        <td>{{::item.company}}</td>
+        <td>{{::item.address}}</td>
+        <td>{{::item.favoriteFruit}}</td>
+    </tr>
+    </tbody>
+</table>
+<hr>
+
+<table qs-table
+       interface="interface"
+       data="data1"
+       items-per-page="10"
+       total-items="totalItems1"
+       headers="Name, Eye color, Home address, Friends"
+       fields="name,eyeColor,address,friends">
+    <tbody ng-non-bindable>
+    <tr>
+        <td>{{::item.name}}</td>
+        <td>
+            <div class="{{::item.eyeColor}} eye"></div>
+            {{::item.eyeColor}}
+        </td>
+        <td>{{::item.address}}</td>
+        <td>
+				<span ng-if="item.eyeColor=='blue'" ng-repeat="friend in item.friends" class="label label-info friend">
+					{{::friend.name}}
+				</span>
+        </td>
+    </tr>
+    </tbody>
+</table>

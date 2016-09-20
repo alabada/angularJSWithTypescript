@@ -1,0 +1,25 @@
+{
+  "data": [{
+    "type": "qs-panel",
+    "attr": {
+      "heading": "Common Grid",
+      "colour": "default"
+    },
+    "options": {
+    },
+    "table": {
+      "columnNameShow": [{"name":"id"},{"name":"姓名"},{"name":"年龄"},{"name":"邮箱"},{"name":"单位","width":"200px","overflow":"true"},{"name":"电话号码"}],
+      "columnNameReal": [{"name":"id"},{"templateId":"nameTemplateId"},{"name":"age"},{"name":"email"},{"name":"dept"},{"name":"telephone"}],
+      "operation": {
+        "edit": "false",
+        "view": "false",
+        "link": "true",
+        "subMenu": "true"
+      },
+      "pagination": {
+        "direction-links": "true",
+        "boundary-links": "true"
+      }
+    }
+  }]
+}

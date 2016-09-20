@@ -1,0 +1,103 @@
+{
+  "overallEleConfig": {
+    "label": {
+      "class ": "col-lg-3 col-md-3"
+    },
+    "formEleCont": {
+      "class": "col-lg-9 col-md-9"
+    }
+  },
+  "formAttrs":{
+    "class":"col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 form-horizontal"
+  },
+  "formLayout": [
+    {
+      "type": "select",
+      "name": "sex",
+      "eleConfig": {
+        "label": {
+          "text": "性别"
+        },
+        "formEle":{
+          "placeholder":"请选择",
+          "filter":"| limitTo:3 | orderBy"
+        }
+      },
+      "data": [{
+        "id":"1",
+        "text": "男",
+        "value":"男"
+      }, {
+        "id":"2",
+        "text": "女",
+        "value":"女"
+      },{
+        "id":"3",
+        "text": "第三性别",
+        "value":"第三性别"
+      }]
+    },
+    {
+    "type": "number",
+    "name": "age",
+    "eleConfig": {
+      "label": {
+        "text": "年龄"
+      },
+      "formEle": {
+        "placeholder": "请输入年龄",
+        "required": "true",
+        "max": "150",
+        "min": "0"
+      }
+    },
+    "valiRule":{
+      "required":"年龄不能为空"
+    }
+  },{
+      "type": "number",
+      "name": "qq",
+      "eleConfig": {
+        "label": {
+          "text": "QQ号码"
+        },
+        "formEle": {
+          "placeholder": "请输入您的QQ号码",
+          "required": "true"
+        }
+      },
+      "valiRule":{
+        "required":"QQ号码不能为空"
+      }
+    },
+    {
+    "type": "textarea",
+    "name": "describe",
+    "eleConfig": {
+      "label": {
+        "text": "用户简介"
+      },
+      "formEle": {
+        "rows": "8"
+      }
+    }
+  }, {
+    "type": "btns",
+    "eleConfig": {
+      "formEleCont": {
+        "class": "col-md-9 col-lg-9 col-lg-offset-3 col-md-offset-3 "
+      },
+      "items": [{
+        "type": "submit",
+        "class": "btn-success btn",
+        "text": "保存",
+        "w5c-form-submit": "formCtr.submit()"
+      }, {
+        "type": "button",
+        "class": "btn-info btn",
+        "text": "清空",
+        "ng-click": "vali.reset()"
+      }]
+    }
+  }]
+}

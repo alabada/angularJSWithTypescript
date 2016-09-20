@@ -1,0 +1,14 @@
+#使用google的代码风格 + angular
+extends: 
+  - google
+  - angular
+#配置使用的环境#
+env: 
+  browser: true
+  node: true
+  commonjs: true
+  amd: true #对requireJS的支持
+  es6: true #开启es6
+#其它的规则
+rules:
+  angular/module-getter: 0 #关闭angular model不能用app的问题

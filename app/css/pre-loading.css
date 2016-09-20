@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+ #pre-loading{
+    font-family: "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #ad5c39;    
+    background: -moz-linear-gradient(-45deg, #ad5c39 0%, #deb734 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ad5c39), color-stop(100%,#deb734));
+    background: -webkit-linear-gradient(-45deg, #ad5c39 0%,#deb734 100%);
+    background: -o-linear-gradient(-45deg, #ad5c39 0%,#deb734 100%);
+    background: -ms-linear-gradient(-45deg, #ad5c39 0%,#deb734 100%);
+    background: linear-gradient(135deg, #ad5c39 0%,#deb734 100%);
+    background-attachment: fixed;
+    z-index: 10000;
+}
+#pre-loading:after{
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+}
+#pre-loading .loading-img-cont{
+    display: inline-block;
+    width: 45%;
+    vertical-align: middle;
+    color:#fff;
+    font-size: 18px;
+}
+#pre-loading .loading-img-cont p {
+    margin-top: 20px;
+}
+#pre-loading .loading-img{
+    width: 15%;
+}

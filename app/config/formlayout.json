@@ -1,0 +1,442 @@
+{
+  "overallEleConfig": {
+    "label": {
+      "class ": "col-lg-3 col-md-3"
+    },
+    "formEleCont": {
+      "class": "col-lg-9 col-md-9"
+    }
+  },
+  "formAttrs":{
+    "class":"col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 form-horizontal"
+  },
+  "formLayout": [{
+    "type": "email",
+    "name": "testEmeil",
+    "eleConfig ": {
+      " label": {
+        "text": " 邮箱"
+      },
+      "formEle": {
+        "placeholder": "请输入你的邮箱",
+        "required": "true"
+      }
+    },
+    "valiRule": {
+      "email ": "邮箱格式错误",
+      "required ": "邮箱未填写"
+    }
+  }, {
+    "name": "testUserName",
+    "eleConfig": {
+      "label": {
+        "text": "用户名"
+      },
+      "formEle": {
+        "placeholder": "输入why520crazy验证存在",
+        "required": "true",
+        "ng-pattern": "/^[A-Za-z]{1}[0-9A-Za-z_]{1,19}$/",
+        "w5c-unique-check": "{url:'http://www.ngnice.com/api/test/user/name/check?name='+vali.entity.name}"
+      }
+    },
+    "valiRule": {
+      "pattern": "用户名必须输入字母、数字、下划线,以字母开头",
+      "required": "输入的用户名不能为空",
+      "w5cuniquecheck": "输入用户名已经存在，请重新输入"
+    }
+  }, {
+    "type": "password",
+    "name": "testPassword",
+    "eleConfig": {
+      "label": {
+        "text": "密码"
+      },
+      "formEle": {
+        "placeholder": "输入你的密码",
+        "required": "true",
+        "ng-minlength": 5,
+        "ng-maxlength": 15
+      }
+    },
+    "valiRule":{
+      "required" : "密码不能为空",
+      "minlength": "密码长度不能小于{minlength}",
+      "maxlength": "密码长度不能大于{maxlength}"
+    }
+  }, {
+    "type": "password",
+    "name": "testRepeatPassword",
+    "eleConfig": {
+      "label": {
+        "text": "重复密码"
+      },
+      "formEle": {
+        "placeholder": "再次输入你的密码",
+        "required": "true",
+        "w5c-repeat": "testPassword"
+      }
+    },
+    "valiRule":{
+      "required": "重复密码不能为空",
+      "repeat"  : "两次密码输入不一致"   
+    }
+  },{
+    "type": "static",
+    "name": "testStatic",
+    "eleConfig": {
+      "label": {
+        "text": "静态类型"
+      }
+    }
+  }, {
+    "type": "number",
+    "name": "testnumber",
+    "eleConfig": {
+      "label": {
+        "text": "数字"
+      },
+      "formEle": {
+        "placeholder": "输入数字(10-15)",
+        "required": "true",
+        "max": "15",
+        "min": "10"
+      }
+    },
+    "valiRule":{
+      "required":"数字不能为空"
+    }
+  }, {
+    "type": "number",
+    "name": "testcustomizer",
+    "eleConfig": {
+      "label": {
+        "text": "自定义验证"
+      },
+      "formEle": {
+        "placeholder": "数字必须大于上面输入的数字",
+        "required": "true",
+        "max": "15",
+        "min": "10",
+        "associate": "testnumber",
+        "w5c-customizer": "$parent.customizer.testnumber()"
+      }
+    },
+    "valiRule":{
+      "required":"自定义验证不能为空",
+      "customizer":"自定义验证:输入的数字必须大于上面的数字"
+    }
+  }, {
+    "type": "url",
+    "name": "testUrl",
+    "eleConfig": {
+      "label": {
+        "text": "URL"
+      },
+      "formEle": {
+        "placeholder": "URL"
+      }
+    }
+  }, {
+    "type": "select",
+    "name": "testSelect",
+    "eleConfig": {
+      "label": {
+        "text": "普通下拉(带过滤器)"
+      },
+      "formEle":{
+        "placeholder":"请选择",
+        "filter":"| limitTo:3 | orderBy"
+      }
+    },
+    "data": [{
+      "id":"1",
+      "text": "第一项",
+      "value":"item_1"
+      }, {
+      "id":"2",
+      "text": "第二项",
+      "value":"item_2"
+      },{
+      "id":"3",
+      "text": "第三项",
+      "value":"item_3"
+      },{
+      "id":"4",
+      "text": "这是第四项,会被限制显示",
+      "value":"item_4"
+      }] 
+  }, {
+    "type": "select",
+    "name": "testMultiSelect",
+    "eleConfig": {
+      "label": {
+        "text": "多选(限制2个)"
+      },
+      "formEle":{
+        "required":"true",
+        "multiple-placeholder":"<-已选中项",
+        "placeholder":"请从以下内容选择",
+        "multiple":"true",
+        "multiple-limit":"2",
+        "required":"true",
+        "list-placeholder":"error:这个对象是空的"
+       }
+    },
+    "valiRule":{
+        "required":"请您至少选择一个"
+    },
+    "data": [{
+        "id": 0,
+        "text": "第一项",
+        "value":"item_1"
+      },{
+        "id": 1,
+        "text": "第二项",
+        "value":"item_2"
+      },{
+        "id": 2,
+        "text": "第三项",
+        "value":"item_3"
+      },{
+        "id": 3,
+        "text": "第四项",
+        "value":"item_4"
+      }] 
+  },{
+    "type": "select",
+    "name": "testGroupSelect",
+    "eleConfig": {
+      "label": {
+        "text": "分组下拉"
+      },
+      "formEle":{
+        "placeholder":"请从以下内容选择"
+       }
+    },
+    "data": [
+      {
+          "text": "sneakers",
+          "category": "shoes",
+          "disabled": true
+      }, {
+          "text": "shoes",
+          "category": "shoes"
+      }, {
+          "text": "slippers",
+          "category": "shoes"
+      }, {
+          "text": "boots",
+          "category": "shoes",
+          "disabled": true
+      }, {
+          "text": "shirt",
+          "category": "clothes",
+          "disabled": true
+      }, {
+          "text": "jacket",
+          "category": "clothes"
+      }, {
+          "text": "T-shirt",
+          "category": "clothes"
+      }, {
+          "text": "pants",
+          "category": "clothes"
+      }, {
+          "text": "jeans",
+          "category": "clothes"
+      }, {
+          "text": "cap"
+      }, {
+          "text": "belt"
+      }
+    ] 
+  }, {
+    "type": "radio",
+    "name": "testRadio",
+    "eleConfig": {
+      "label": {
+        "text": "单选框",
+        "class": "col-md-3 text-right col-lg-3"
+      },
+      "items": {
+        "subLabel": {
+          "class": "radio-inline"
+        }
+      }
+    },
+    "data": [{
+      "text": "可用 ",
+      "value": "Y"
+    }, {
+      "text": "不可用",
+      "value": "N"
+    }]
+  }, {
+    "type": "checkbox",
+    "name": "testcheckbox",
+    "eleConfig": {
+      "label": {
+        "text": "多选框",
+        "class": "col-md-3 text-right col-lg-3"
+      },
+      "items": {
+        "subLabel": {
+          "class": "checkbox-inline"
+        }
+      }
+    },
+    "data": [{
+      "text": "选项一",
+      "value": "check_one"
+    }, {
+      "text": "选项二",
+      "value": "check_two"
+    }]
+  },{
+    "type": "linkage",
+    "name": "testAreaPicker",
+    "eleConfig ": {
+      "label": {
+        "text": "三联地区选择"
+      },
+      "formEle":{
+        "qs-linkage-palaceholder" : "--省--;--市--;--区--",
+        "qs-linkage-subnames"     : "province;city;district",
+        "qs-linkage-dataUrl"      : "./config/formlayout-areapicker.json",
+        "qs-linkage-index-code"   : "86"
+      }
+    }
+  },{
+    "name": "testUppercase",
+    "eleConfig": {
+      "label": {
+        "text": "锁定大写"
+      },
+      "formEle": {
+        "model-format": "uppercase"
+      }
+    }
+  }, {
+    "name": "testLowercase",
+    "eleConfig": {
+      "label": {
+        "text": "锁定小写"
+      },
+      "formEle": {
+        "model-format": "lowercase"
+      }
+    }
+  }, {
+    "name": "testCapitalize",
+    "eleConfig": {
+      "label": {
+        "text": "首字母大写"
+      },
+      "formEle": {
+        "model-format": "capitalize"
+      }
+    }
+  }, {
+    "name": "testcurrency",
+    "eleConfig": {
+      "label": {
+        "text": "货币"
+      },
+      "formEle": {
+        "model-format": "currency",
+        "formatter": "formatter($modelValue,$filter,'\u00A50.00');"
+      }
+    }
+  },{
+    "type": "img",
+    "name": "testimg",
+    "eleConfig ": {
+      "label": {
+        "text": "图片"
+      },
+      "formEle":{
+        "style":"width:200px;height:150px"
+      }
+    }
+  }, {
+    "type": "textarea",
+    "name": "testTextarea",
+    "eleConfig": {
+      "label": {
+        "text": "文本域"
+      },
+      "formEle": {
+        "rows": "8"
+      }
+    }
+  },{
+    "type": "edit",
+    "name": "testHtmlEdit",
+    "eleConfig ": {
+      "label": {
+        "text": "编辑器",
+        "class":"layout-htmledit-label col-lg-3 col-md-3"
+      },
+      "formEleCont":{
+        "class":"col-md-10 col-lg-10 col-lg-offset-2 col-md-offset-2"
+      },
+      "formEle":{
+        "required":"true"
+      }
+    },
+    "valiRule":{
+      "required":"你尚未输入编辑内容"
+    }
+  }, {
+    "type": "checkbox",
+    "name": "must_check",
+    "eleConfig": {
+      "label": {
+        "text": "必选项",
+        "class": "col-md-3 text-right col-lg-3"
+      },
+      "items": {
+        "subLabel": {
+          "class": "checkbox-inline"
+        },
+        "formEle":{
+          "required":"true"
+        }
+      }
+    },
+    "data": [{
+      "text": "必选项",
+      "value": "must_check"
+    }]
+  },{
+    "type": "btns",
+    "eleConfig": {
+      "formEleCont": {
+        "class": "col-md-9 col-lg-9 col-lg-offset-3 col-md-offset-3 "
+      },
+      "items": [{
+        "type": "submit",
+        "class": "btn-success btn",
+        "text": "验证",
+        "w5c-form-submit": "$parent.formCtr.submit()"
+      }, {
+        "type": "button",
+        "class": "btn-info btn",
+        "text": "清空",
+        "ng-click": "$parent.demovali.reset()"
+      }]
+    }
+  },{
+    "type":"ph",
+    "name":"hr1",
+    "template":"<hr>"
+  },{
+    "type":"phurl",
+    "name":"test_placeholder",
+    "templateUrl":"./views/default/form/placehoderDemo.html"
+  },{
+    "type":"ph",
+    "name":"hr2",
+    "template":"<hr>"
+  }]
+}

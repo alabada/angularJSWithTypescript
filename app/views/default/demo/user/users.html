@@ -1,0 +1,31 @@
+<div>
+    <div class="row">
+        <ol class="breadcrumb">
+            <li ng-repeat="crumb in $breadcrumbs" ng-class="{ 'active' : $last }">
+                <a ng-if="!$last" href="{{$state.href(crumb.state, crumb.stateParams)}}">{{crumb.title}}</a>
+                <span ng-if="$last">{{crumb.title}}</span>
+            </li>
+        </ol>
+
+
+
+
+        <!-- /.col-lg-12 -->
+    </div>
+
+
+    <!-- 查找框组 -->
+    <qs-grid-search url="userSearch">
+    </qs-grid-search>
+    <hr>
+<input type="button" class="btn btn-default" value="刷新" ng-click="fresh2()" />
+    <!-- crud组 -->
+    <qs-grid-crud url="userCrud">
+    </qs-grid-crud>
+    <hr>
+
+    <!-- panel组-->
+    <qs-grid-panel interface="interface">
+    </qs-grid-panel>
+
+</div>

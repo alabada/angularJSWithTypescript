@@ -1,0 +1,44 @@
+<h1 class="page-header">进度条demo</h1>
+<hr>
+
+<h3>静态</h3>
+<div class="row">
+    <div class="col-sm-4">
+        <!-- 只传value属性值，最简单的静态进度条。默认max值为100 -->
+        <uib-progressbar value="55"></uib-progressbar>
+    </div>
+    <div class="col-sm-4">
+        <uib-progressbar 
+            class="progress-striped" 
+            value="22" 
+            type="warning">22%</uib-progressbar>
+    </div>
+    <div class="col-sm-4">
+        <uib-progressbar 
+            class="progress-striped active" 
+            max="200" v
+            alue="166" 
+            type="danger">
+            <i>166 / 200</i>
+        </uib-progressbar>
+    </div>
+</div>
+
+
+
+<hr />
+<h3>动态 <button type="button" class="btn btn-sm btn-primary" ng-click="random()">产生随机数</button></h3>
+<uib-progressbar 
+    max="max" 
+    value="dynamic">
+    <span style="color:white; white-space:nowrap;">{{dynamic}} / {{max}}</span>
+</uib-progressbar>
+<small><em>没有动画的效果</em></small>
+<uib-progressbar animate="false" value="dynamic" type="success"><b>{{dynamic}}%</b></uib-progressbar>
+<small><em>根据进度条的值来改变提示信息</em></small>
+<uib-progressbar class="progress-striped active" value="dynamic" type="{{type}}">{{type}} <i ng-show="showWarning">!!! Watch out !!!</i></uib-progressbar>
+<hr />
+<h3>堆叠效果 <button type="button" class="btn btn-sm btn-primary" ng-click="randomStacked()">产生随机数</button></h3>
+<uib-progress>
+    <uib-bar ng-repeat="bar in stacked track by $index" value="bar.value" type="{{bar.type}}"><span ng-hide="bar.value < 5">{{bar.value}}%</span></uib-bar>
+</uib-progress>

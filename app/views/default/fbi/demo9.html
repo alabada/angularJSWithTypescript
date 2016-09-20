@@ -1,0 +1,319 @@
+<!-- 
+    html:app\views\default\fbi\demo9.html 
+    controller:app\js\controller\fbi\Demo9Controller.js 
+-->
+<style>
+    .text-orange{
+        color:#ffaa09;
+    }
+    .edit-label {
+        width: 114px;
+        float: left;
+        margin-right: 40px;
+    }
+        .edit-label label{
+            font-size: normal;    
+        }
+        .edit-label.required:before{
+            content: "*";
+            margin-right: 10px;
+            vertical-align: sub;
+            display: inline-block;
+            color:red;
+        }
+    .edit-ipt-cont{
+        float: left;
+    }
+    .edit-ipt-cont.oi-select-cont{
+        width: 600px;
+    }    
+        .edit-ipt-cont.oi-select-cont .select-dropdown{
+            width: 100%;
+        }
+    
+        .edit-ipt-cont input[type=text] {
+            width: 205px;
+        }
+        .edit-ipt-cont.fbiname input{
+            width: 477px;
+        }
+    
+    .fbi-detail{
+        width: 800px;
+    }
+    .fbi-detail>.form-group{
+        width: 50%;
+        float: left;
+    }
+        
+        .fbi-detail .tech{
+            width: 100%;
+        }
+        .fbi-detail .tech .edit-ipt-cont{
+            width: 600px;
+        }
+        .fbi-detail .tech .btn{
+            margin-right: 15px;
+        }
+    .edit-ipt-cont.has-unit input{
+        display: inline-block;
+    }
+    .unit-super {
+        display: inline-block;
+        position: absolute;
+
+    }
+    .unit-super i{
+        font-size: 12px;
+        vertical-align: super;
+    }
+</style>
+<h2>编辑面料demo</h2>
+<p class="well "><span>*</span>提示&ensp;:&ensp;请务必如实填写各项属性，以免造成面料下架，影响正常展示和应用。</p>
+
+
+<form 
+    class="w5c-form form-horizontal" 
+    role="form" 
+    w5c-form-validate-rules='vali.valiRules' 
+    w5c-form-validate='vali.valiOptions' 
+    name="editFbi"
+    novalidate >
+    <!--面料属性-->
+    <h3>面料属性</h3>
+
+    <!-- 面料货号 -->
+    <div class="form-group">
+        <label class="edit-label control-label required">面料货号 :</label>
+        <div class="edit-ipt-cont">
+            <input 
+                type="text" 
+                name="itemNO" 
+                ng-model="editFbi.fbiAttrs.itemNO" 
+                required = "true"
+                class="form-control" 
+                ng-pattern="/^[0-9A-Za-z]{1,20}$/" 
+                placeholder="输入邮箱">
+        </div><span class="text-muted">20个字符以内，限数字与字母，货号必须唯一</span>
+    </div>
+
+    <!-- 面料类型 -->
+    <div class="form-group">
+        <label class="edit-label control-label required">面料类型 :</label>
+        <div class="edit-ipt-cont">
+            <!-- <div class="form-control"></div> -->
+            <button 
+                class="btn btn-default"
+                data-ng-click="shPop( popSelData.types )">选择</button>
+        </div>
+    </div>
+
+
+    <!--织物类型-->
+    <div class="form-group">
+        <label class="edit-label control-label required">织物类型 :</label>
+        <div class="edit-ipt-cont">
+            <label class="radio-inline" data-ng-repeat="clazz in formData.clazzes">
+                <input 
+                    type="radio" 
+                    ng-model="editFbi.fbiAttrs[clazz.name]"  
+                    value="clazz.name"  
+                    name='clazz.name'>{{clazz.text}}
+            </label>
+        </div>
+    </div>
+
+    <!-- 织物组织 -->
+    <div class="form-group">
+        <label class="edit-label control-label required">织物组织 :</label>
+        <div class="edit-ipt-cont oi-select-cont">
+            <qs-linkage
+                 class="w5c-ele"
+                 ng-model = "editFbi.fbiAttrs.organization"
+                 name     = "organization"
+                 qs-linkage-palaceholder = "常规针织;汗布"
+                 qs-linkage-subnames     = "woven;fabric"
+                 qs-linkage-dataUrl      =  "{{organizationURL}}"
+                 qs-linkage-index-code   = "86">
+            </qs-linkage>
+        </div>
+    </div>
+    
+    <!-- 面料名称 -->
+    <div class="form-group">
+        <label class="edit-label control-label required">面料名称 :</label>
+        <div class="edit-ipt-cont fbiname">
+            <input 
+                type="text" 
+                name="fbiname" 
+                ng-model="editFbi.fbiAttrs.fbiname" 
+                required 
+                ng-maxlength =  20
+                class="form-control" 
+                placeholder="黑色锦纶蕾丝">
+            <p class="text-muted"><span class="text-orange">颜色+成分+材质，最多20个字</span>例如：白色锦纶蕾丝</p>
+        </div>
+    </div>
+
+    <!-- 面料标签 -->
+    <div class="form-group">
+        <label class="edit-label control-label required">面料标签 :</label>
+        <div class="edit-ipt-cont">
+        </div>
+    </div>
+
+
+    <!-- 成分及含量 -->
+    <div class="form-group">
+        <label class="edit-label control-label required">成分及含量 :</label>
+        <div class="edit-ipt-cont oi-select-cont">
+            <qs-linkage
+                 class = 'w5c-ele'
+                 ng-model = "editFbi.fbiAttrs.compsn"
+                 name     = "compsn"
+                 qs-linkage-palaceholder = "成份;含量"
+                 qs-linkage-subnames     = "compsn;percent"
+                 qs-linkage-dataUrl      = "{{compsnURL}}"
+                 qs-linkage-index-code   = "86">
+            </qs-linkage>  
+        </div>
+    </div>
+
+    <!-- 面料细节图片 -->
+    
+    <div class="form-group">
+        <label class="edit-label control-label required">面料细节图片 :</label>
+        <div class="edit-ipt-cont">
+          
+        </div>
+    </div>    
+    <p>更加详细的面料信息，有助于面料销售。<span class="text-orange">收起</span></p>
+    <div class="fbi-detail clearfix">
+
+        <div class="form-group">
+            <label class="edit-label control-label">纱支 :</label>
+            <div class="edit-ipt-cont">
+                <input 
+                    type="text" 
+                    name="yarncount"
+                    ng-model="editFbi.fbiAttrs.yarncount"
+                    class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="edit-label control-label">幅宽 :</label>
+            <div class="edit-ipt-cont">
+                <input 
+                    type="text" 
+                    name="width"
+                    ng-model="editFbi.fbiAttrs.width"
+                    class="form-control">
+            </div>
+        </div>
+        
+
+        <div class="form-group">
+            <label class="edit-label control-label">密度 :</label>
+            <div class="edit-ipt-cont">
+                <input 
+                    type="text" 
+                    name="denstiy"
+                    ng-model="editFbi.fbiAttrs.denstiy"
+                    class="form-control">
+            </div>
+        </div>
+
+
+       
+        
+
+        <div class="form-group">
+            <label class="edit-label control-label">克重 :</label>
+            <div class="edit-ipt-cont has-unit">
+                <input 
+                    type="text" 
+                    name="weight"
+                    ng-model="editFbi.fbiAttrs.weight"
+                    class="form-control"><span class="unit-super">g/m<i>3</i></span>
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <label class="edit-label control-label">品牌 :</label>
+            <div class="edit-ipt-cont">
+                <input 
+                    type="text" 
+                    name="weight"
+                    ng-model="editFbi.fbiAttrs.weight"
+                    class="form-control">
+            </div>
+        </div>
+        
+
+        <div class="form-group tech">
+            <label class="edit-label control-label">工艺 :</label>
+            <div class="edit-ipt-cont well">
+                <button 
+                    data-ng-repeat="tech in techBtns" 
+                    class='btn btn-default'
+                    ng-click="changeTech(tech.techKey)">{{tech.techName}}</button>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+    <!--end面料属性-->
+
+    <!-- 面料贴图 -->
+    <h3>面料贴图（特色服务）</h3><span>上传面料贴图，可以查看3D面料着装展示效果，有助于面料销售（此项为选填）。了解更多</span><span>收起</span>
+    <div>
+        
+    </div>
+    <!-- end 面料贴图 -->
+    
+
+    <!-- 商品信息 -->
+    <h3>商品信息</h3>
+    <div class="form-group">
+        <label class="edit-label control-label required">面料报价 :</label>
+        <div class="edit-ipt-cont">
+            <!-- <label class="radio-inline">
+                <input 
+                    type="radio" 
+                    ng-model="editFbi.fbiInfo.negote_price"  
+                    value=""
+                    name='clazz.name'>{{clazz.text}}
+            </label> -->
+        </div>
+    </div>
+
+    <!-- end商品信息 -->
+
+</form>
+
+<!-- 弹窗 -->
+<script type="text/ng-template" id="dataSel">
+    <div class="ngdialog-message">
+        <h3 class="text-orange">选择面料类型</h3><span>请勾选面料类型</span>
+        <div class="selected">
+            <span data-ng-repeat="type in selectTypes track by type.key">{{type.name}}</span>
+        </div>
+        <div class="select-cont">
+            <div class="left" data-ng-repeat="(key,val) in data">
+                <p data-ng-click="shRight(key)">{{val.name}}</p>
+            </div>
+            <div class ="right">
+                <label data-ng-repeat="rdata in rightData">
+                    <input type="checkbox" ng-click = "selType(rdata)">{{rdata.name}}
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="ngdialog-buttons">
+        <button type="button" class="ngdialog-button ngdialog-button-primary">Save</button>
+    </div>
+</script>
+<!-- html:app\views\default\fbi\demo9.html

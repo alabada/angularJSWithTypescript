@@ -1,0 +1,61 @@
+
+<!-- 
+  html: app/views/default/linkage/linkage.html
+  controller: app/js/controller/LinkageController.js
+  联动用的数据json: app/config/formlayout-areapicker.json
+ -->
+<div class="row">
+    <h1 class="page-header">多级联动下拉演示</h1>
+    
+
+    <h2>地区三级联动</h2>
+    <p>* 已在controller 中初始化了数据</p>
+    <div class="col-lg-8 col-md-8">
+      <qs-linkage
+           ng-model = "linkageTest1"
+           name     = "linkageTest1"
+           qs-linkage-palaceholder = "省;市;区"
+           qs-linkage-subnames     = "province;city;district"
+           qs-linkage-dataUrl      = "./config/formlayout-areapicker.json"
+           qs-linkage-index-code   = "86">
+      </qs-linkage>  
+    </div>
+    <div class="col-lg-4 col-md-4">
+      <div class="well well-lg">
+        scope.linkageTest1 的数据如下:
+        <ul class="list-unstyled">
+          <li>province:  {{linkageTest1.province}}</li>
+          <li>city: {{linkageTest1.city}}</li>
+          <li>district: {{linkageTest1.district}}</li>
+        </ul>
+      </div>  
+    </div>
+
+
+    <hr>
+
+    <h2>二级联动</h2>
+    <p>* 使用对象传入而非json</p>
+    <div class="col-lg-8 col-md-8">
+      <qs-linkage
+           ng-model = "linkageTest2"
+           qs-linkage-palaceholder ="省;市"
+           qs-linkage-subnames     = "level1;level2"
+           qs-linkage-data         = "linkageData"
+           qs-linkage-index-code   = "11">
+      </qs-linkage>  
+    </div>
+    <div class="col-lg-4 col-md-4">
+      <div class="well well-lg">
+        scope.linkageTest2 的数据如下:
+        <ul class="list-unstyled">
+          <li>level1:  {{linkageTest2.level1}}</li>
+          <li>level2: {{linkageTest2.level2}}</li>
+        </ul>
+      </div>  
+    </div>
+
+  <a href data-ng-click="setData()">设置数据</a>
+
+</div>
+<!-- end html: app/views/default/linkage/linkage.html -->

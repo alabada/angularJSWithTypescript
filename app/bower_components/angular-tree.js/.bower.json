@@ -1,0 +1,42 @@
+{
+  "name": "angular-tree.js",
+  "version": "0.1.1",
+  "authors": [
+    "Robin Bressan <robin@buddey.net>"
+  ],
+  "description": "Module to use tree.js into your AngularJS applications",
+  "main": "ng-tree.min.js",
+  "keywords": [
+    "tree"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "src",
+    "build",
+    "Makefile",
+    "package.json"
+  ],
+  "dependencies": {
+    "angular": "~1.2.21",
+    "tree.js": "~1.0.2"
+  },
+  "devDependencies": {
+    "almond": "~0.2.9",
+    "angular-mocks": "~1.2.21"
+  },
+  "homepage": "https://github.com/marmelab/ng-tree",
+  "_release": "0.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.1",
+    "commit": "04f930cab90b9c0dbebbef02d9df703c20427741"
+  },
+  "_source": "https://github.com/marmelab/ng-tree.git",
+  "_target": "^0.1.1",
+  "_originalSource": "ng-tree",
+  "_direct": true
+}

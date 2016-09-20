@@ -1,0 +1,45 @@
+/*****图像主区******/
+
+.img-view-cont {
+  width: 100%;
+  height: 600px;
+  background: #4D4A4A;
+  display: block;
+  margin: 0 auto;
+  vertical-align: top;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px;
+  z-index: 1;
+  /*canvas*/
+  .img-view-canvas {
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    cursor: move;
+    //background:#999;
+  }
+
+
+  /*放大与缩小控制*/
+
+  .scale-value {
+    min-width: 100px;
+    line-height: 30px;
+    font-size: 18px;
+    color: #fff;
+    float: right;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    /* margin: 4px; */
+    text-align: center;
+    text-indent: .5em;
+    z-index: 1000;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+  }
+}
+

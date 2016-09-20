@@ -1,0 +1,331 @@
+[
+  {
+    "label": "仪表盘",
+    "href": "dashboard.home",
+    "icon": "fa fa-dashboard fa-fw"
+  },
+  {
+    "label": "BootStrap组件",
+    "href": "",
+    "icon": "fa fa-th",
+    "children": [
+      {
+        "label": "字体库",
+        "href": "dashboard.fonts",
+        "icon": "fa fa-briefcase fa-fw"
+      },{
+        "label": "进度条",
+        "href": "dashboard.qsProgressbar",
+        "icon": "fa fa-pie-chart fa-fw"
+      },{
+        "label": "面板",
+        "href": "dashboard.qsPanel",
+        "icon": "fa fa-pie-chart fa-fw"
+      },{
+        "label": "分页按钮 / Pager",
+        "href": "dashboard.pager",
+        "icon": "fa  fa-caret-square-o-down fa-fw"
+      },{
+        "label": "分页 / Pagination ",
+        "href": "dashboard.qsPagination",
+        "icon": "fa fa-book fa-fw"
+      },{
+        "label": "旋转木马",
+        "href": "dashboard.qsCarousel",
+        "icon": "fa fa-cog fa-fw"
+      },{
+        "label": "评分",
+        "href": "dashboard.qsRating",
+        "icon": "fa fa-frown-o fa-fw"
+      },{
+        "label": "手风琴 / Accordion",
+        "href": "dashboard.accordion",
+        "icon": "fa  fa-caret-square-o-down fa-fw"
+      },{
+        "label": "折叠 / Collapse",
+        "href": "dashboard.collapse",
+        "icon": "fa  fa-caret-square-o-down fa-fw"
+      },{
+        "label": "下拉菜单 / dropdown",
+        "href": "dashboard.dropdown",
+        "icon": "fa  fa-caret-square-o-down fa-fw"
+      },{
+        "label": "警告框 / alert",
+        "href": "dashboard.alert",
+        "icon": "fa fa-bell fa-fw"
+      },{
+        "label": "导航 标签页/ tabs",
+        "href": "dashboard.tabs",
+        "icon": "fa fa-bookmark fa-fw"
+      },{
+        "label": "缩略图 / thumbnail",
+        "href": "dashboard.thumbnail",
+        "icon": "fa fa-photo fa-fw"
+      },{
+        "label": "日期格式化/Dateparser",
+        "href": "dashboard.dateparser",
+        "icon": "fa  fa-calculator fa-fw"
+      },{
+        "label": "日期选则 / datepicker",
+        "href": "dashboard.datepicker",
+        "icon": "fa  fa-calculator fa-fw"
+      },{
+        "label": "日期选则弹出式/datepickerPopup",
+        "href": "dashboard.datepickerPopup",
+        "icon": "fa  fa-calculator fa-fw"
+      },{
+        "label": "时间选择器/Timepicker",
+        "href": "dashboard.timepicker",
+        "icon": "fa  fa-calculator fa-fw"
+      },{
+        "label": "工具提示 / tooltip",
+        "href": "dashboard.tooltip",
+        "icon": "fa fa-info fa-fw"
+      },{
+        "label": "弹出提示 / Popover",
+        "href": "dashboard.popover",
+        "icon": "fa fa-info fa-fw"
+      },{
+        "label": "按钮组 / buttons",
+        "href": "dashboard.buttons",
+        "icon": "fa fa-check-square  fa-fw"
+      },{
+        "label": "模态框 / modal",
+        "href": "dashboard.modal",
+        "icon": "fa  fa-th-large fa-fw"
+      },{
+        "label": "输入补全 / Typeahead",
+        "href": "dashboard.typeahead",
+        "icon": "fa  fa-th-large fa-fw"
+      },{
+        "label": "位置服务 / Position",
+        "href": "dashboard.position",
+        "icon": "fa  fa-th-large fa-fw"
+      }
+    ]
+  },
+  {
+    "label": "自定义组件",
+    "href": "",
+    "icon": "fa  fa-th-large fa-fw",
+    "children": [
+      {
+        "label": "多级联动下拉 / linkage",
+        "href": "dashboard.linkage",
+        "icon": "fa  fa-th-large fa-fw"
+      },{
+        "label": " 图片查看 / imgView ",
+        "href": "dashboard.imgView",
+        "icon": "fa  fa-th-large fa-fw"
+      },
+      {
+        "label": "grid",
+        "href": "dashboard.grid",
+        "icon": "fa fa-table fa-fw"
+      },
+      {
+        "label":"改装组件table",
+        "href":"dashboard.qsTable",
+        "icon": "fa fa-table"
+      }
+
+    ]
+  },
+  {
+    "label": "第三方组件",
+    "href": "",
+    "icon": "fa  fa-th-large fa-fw",
+    "children": [
+        {
+          "label": "提示框 / modal",
+          "href": "dashboard.sweetalert",
+          "icon": "fa  fa-th-large fa-fw"
+        },{
+          "label": "拖拽排序 / DragDrop",
+          "href": "dashboard.ngDragDrop2",
+          "icon": "fa  fa-th-large fa-fw"
+        },
+        {
+          "label": "缓存",
+          "href": "dashboard.cache",
+          "icon": "fa fa-ambulance"
+        },
+        {
+          "label": "安全",
+          "href": "dashboard.auth",
+          "icon": "fa fa-ambulance"
+        },
+        {
+          "label": "编辑器/ueditor",
+          "href": "dashboard.ueditor",
+          "icon": "fa fa-edit"
+        },
+        {
+          "label": "编辑器-NEW/textAngular",
+          "href": "dashboard.textAngular",
+          "icon": "fa fa-edit"
+        },
+        {
+          "label": "NOTES",
+          "href": "dashboard.notes.list",
+          "icon": "fa fa-edit"
+        },
+        {
+
+          "label": "NgDialog",
+          "href": "dashboard.dialog",
+          "icon": "fa fa-github-alt"
+        },
+        {
+          "label":"5wc表单验证",
+          "href":"dashboard.w5c",
+          "icon": "fa fa-github-alt"
+        },
+        {
+          "label":"下拉框 oi-select",
+          "href":"dashboard.oiSelect",
+          "icon": "fa fa-github-alt"
+        },
+        {
+          "label":"第三方组件 table",
+          "href":"dashboard.objectTable",
+          "icon": "fa fa-table"
+        }
+      ]
+  },
+
+  {
+    "label": "报表组件",
+    "href": "dashboard.chart",
+    "icon": "fa fa-bar-chart-o",
+    "children": [
+      {
+        "label": "bar",
+        "href": "dashboard.bar",
+        "icon": "fa fa-bar-chart-o"
+      },
+      {
+        "label": "doughnut",
+        "href": "dashboard.doughnut",
+        "icon": "fa fa-circle-o"
+      },
+      {
+        "label": "pie",
+        "href": "dashboard.pie",
+        "icon": "fa fa-pie-chart"
+      },
+      {
+        "label": "radar",
+        "href": "dashboard.radar",
+        "icon": "fa fa-wifi"
+      },
+      {
+        "label": "polararea",
+        "href": "dashboard.polararea",
+        "icon": "fa fa-dot-circle-o"
+      },
+      {
+        "label": "line",
+        "href": "dashboard.line",
+        "icon": "fa fa-line-chart"
+      }
+    ]
+  },
+  {
+    "label": "文件上传组件",
+    "href": "",
+    "icon": "fa fa-th",
+    "children": [
+      {
+        "label": "多文件上传",
+        "href": "dashboard.multipleUpload",
+        "icon": "fa fa-briefcase fa-fw"
+      },
+      {
+        "label": "拖拽上传",
+        "href": "dashboard.dropUpload",
+        "icon": "fa fa-briefcase fa-fw"
+      }
+    ]
+  },
+  {
+    "label": "组件实例",
+    "href": "dashboard.demo",
+    "icon": "fa fa-bars",
+    "children": [
+      {
+        "label": "首页1",
+        "href": "dashboard.backstage",
+        "icon": "fa fa-user"
+      },
+      {
+        "label": "首页2",
+        "href": "dashboard.backstage2",
+        "icon": "fa fa-user"
+      },
+      {
+        "label": "首页3",
+        "href": "dashboard.backstage3",
+        "icon": "fa fa-user"
+      },
+      {
+        "label": "用户列表",
+        "href": "dashboard.user.list",
+        "icon": "fa fa-user"
+      },
+      {
+        "label": "树形联动",
+        "href": "dashboard.tree",
+        "icon": "fa fa-align-justify"
+      },
+
+      {
+        "label":"CLIENT",
+        "href":"dashboard.client.list",
+        "icon":"fa fa-user"
+      }
+    ]
+  },{
+  "label": "面料系统DEMO",
+  "href": "",
+  "icon": "fa fa-leaf",
+  "children": [{
+    "label": "面料DEMO1",
+    "href": "dashboard.fbi.demo1",
+    "icon": "fa fa-paw"
+  },{
+    "label": "面料DEMO2",
+    "href": "dashboard.fbi.demo2",
+    "icon": "fa fa-paw"
+  },{
+    "label": "面料DEMO3",
+    "href": "dashboard.fbi.demo3",
+    "icon": "fa fa-paw"
+  },{
+    "label": "面料DEMO4",
+    "href": "dashboard.fbi.demo4",
+    "icon": "fa fa-paw"
+  },{
+    "label": "面料DEMO5",
+    "href": "dashboard.fbi.demo5",
+    "icon": "fa fa-paw"
+  },{
+    "label": "面料DEMO6",
+    "href": "dashboard.fbi.demo6",
+    "icon": "fa fa-paw"
+  },{
+    "label": "面料DEMO7",
+    "href": "dashboard.fbi.demo7",
+    "icon": "fa fa-paw"
+  },{
+    "label": "面料DEMO8",
+    "href": "dashboard.fbi.demo8",
+    "icon": "fa fa-paw"
+  },{
+    "label": "面料DEMO9",
+    "href": "dashboard.fbi.demo9",
+    "icon": "fa fa-paw"
+  }]
+}
+
+]

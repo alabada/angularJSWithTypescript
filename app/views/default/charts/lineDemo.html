@@ -1,0 +1,36 @@
+<div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Line Chart</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-9">
+            <canvas qs-chart-line chart-options="options" chart-data="data" chart-legend="lineChart1" ></canvas>
+        </div>
+
+        <div class="col-lg-3">
+            <div qs-chart-legend chart-legend="lineChart1"></div>
+        </div>
+
+        <div class="col-lg-12">
+            <button type="button" class="btn btn-outline btn-default" ng-click="randomizeData()">随机生成数据</button>
+            <button type="button" class="btn btn-outline btn-default" ng-click="changeDataObject()">改变数据模型</button>
+            <button type="button" class="btn btn-outline btn-default" ng-click="addDataset()">增加数据集</button>
+            <button type="button" class="btn btn-outline btn-default" ng-click="removeDataset()">移除数据集</button>
+            <button type="button" class="btn btn-outline btn-default" ng-click="addData()">增加数据</button>
+            <button type="button" class="btn btn-outline btn-default" ng-click="removeData()">移除数据</button>
+        </div>
+
+    </div>
+
+    <hr />
+    <div class="row">
+        <div class="col-lg-9">
+            <canvas qs-chart-line chart-options="options" chart-data="tickdata" chart-legend="lineChart2" ></canvas>
+        </div>
+    </div>
+
+
+</div>

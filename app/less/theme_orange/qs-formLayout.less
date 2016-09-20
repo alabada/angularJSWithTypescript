@@ -1,0 +1,109 @@
+.w5c-form input.focus:focus,
+.w5c-form textarea.focus:focus,
+.w5c-form select.focus:focus {
+  border-color: @brand-danger;
+  outline: 0;
+  outline: thin dotted \9;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px @brand-danger;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  color: #000000;
+}
+/* 对oi.select的样式 */
+.w5c-form li.select-search-list-item_input input:focus{
+  border:none;
+  outline: none;
+  box-shadow: none;
+}
+.w5c-form input:focus:focus.error,
+.w5c-form textarea:focus:focus.error,
+.w5c-form select:focus:focus.error {
+  border-color: #b94a48;
+  -webkit-box-shadow: 0 0 6px #f8b9b7;
+  -moz-box-shadow: 0 0 6px #f8b9b7;
+  box-shadow: 0 0 6px #f8b9b7;
+}
+.w5c-form input.error,
+.w5c-form textarea.error,
+.w5c-form select.error {
+  border-color: #b94a48;
+  -webkit-box-shadow: 0 0 6px #f8b9b7;
+  -moz-box-shadow: 0 0 6px #f8b9b7;
+  box-shadow: 0 0 6px #f8b9b7;
+}
+.w5c-form .form-group.has-error .oi-select .select-search{
+  -webkit-box-shadow: 0 0 6px #f8b9b7;
+  -moz-box-shadow: 0 0 6px #f8b9b7;
+  box-shadow: 0 0 6px #f8b9b7;
+  border: 1px solid #b94a48;
+  border-radius: 4px;
+}
+.w5c-form .form-group.has-error .oi-select input.error{
+  border:none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.w5c-form .dropdown-menu {
+  max-height: 400px;
+  overflow-y: auto;
+}
+.w5c-form .alert {
+  margin-bottom: 0px;
+}
+.w5c-form .w5c-error {
+  color: @state-danger-text;
+  display: block;
+  margin-top: 8px;
+  //margin-top: 5px;
+  //border: 1px solid transparent;
+  //border-radius: 4px;
+  //padding: 5px 10px;
+  //color: #fff;
+  //background-color: lighten(@red,8%);
+  //border-color: @red;
+}
+.w5c-form .form-group textarea{
+  resize:none;
+}
+
+
+.w5c-form .qs-area-picker oi-select,
+.w5c-form .qs-area-picker .oi-select {
+    width: 32%;
+    display: block;
+    float: left;
+}
+.w5c-form .qs-area-picker oi-select+oi-select,
+.w5c-form .qs-area-picker .oi-select+.oi-select{
+  margin-left: 2%;
+}
+.w5c-form .qs-area-picker oi-select .select-dropdown,
+.w5c-form .qs-area-picker .oi-select .select-dropdown{
+  min-width: 100%;
+}
+
+
+.w5c-form .qs-area-picker oi-select:not(.multiple) .select-search-list-item_selection,
+.w5c-form .qs-area-picker .oi-select:not(.multiple) .select-search-list-item_selection {
+  word-break:keep-all; 
+  white-space:nowrap; 
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+
+.qs-area-picker oi-select  .select-search-list,
+.qs-area-picker .oi-select .select-search-list{
+  height: 34px;
+}
+
+/**
+.qs-formlayout-htmledit.focussed div.ta-editor.form-control{
+  @color:@brand-success;
+  @color-rgba: rgba(red(@color), green(@color), blue(@color), .6);
+
+  border-color: @color;
+  outline: 0;
+  .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px @{color-rgba}");
+}
+**/

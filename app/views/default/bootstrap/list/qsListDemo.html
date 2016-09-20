@@ -1,0 +1,42 @@
+<div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">列表组</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+
+    <h1>列表组Demo示范</h1>
+
+    <!--
+        type属性可选ul,link,button
+        situation属性可取值： success,info,warning,danger -->
+
+    <h3>1、普通的列表</h3>
+    <qs-list type="ul">
+        <li>Dapibus ac facilisis in</li>
+        <li situation="info">Morbi leo risus</li>
+        <li qs-badge="12">Cras justo odio</li>
+        <li class="disabled">Porta ac consectetur ac</li>
+        <li>Vestibulum at eros</li>
+    </qs-list>
+
+    <h3>2、链接的列表</h3>
+    <qs-list type="link">
+        <a href="#" qs-badge="8" situation="danger">Cras justo odio</a>
+        <a href="#">Dapibus ac facilisis in</a>
+        <a href="#" class="disabled">Morbi leo risus</a>
+        <a href="#" situation="success">Porta ac consectetur ac</a>
+        <a href="#">Vestibulum at eros</a>
+    </qs-list>
+
+    <h3>3、按钮的列表</h3>
+    <qs-list type="button">
+        <button type="button" class="disabled">Cras justo odio</button>
+        <button type="button">Dapibus ac facilisis in</button>
+        <button type="button" situation="warning">Morbi leo risus</button>
+        <button type="button">Porta ac consectetur ac</button>
+        <button type="button" qs-badge="999">Cras justo odio Vestibulum at eros</button>
+    </qs-list>
+
+</div>

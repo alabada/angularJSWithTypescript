@@ -1,0 +1,43 @@
+<div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">{{$title}}</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+
+    <div class="row">
+        <qs-panel colour="green">
+            <qs-panel-head>启尚标题</qs-panel-head>
+            <table panel-table>
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>矢量图片</th>
+                    <th>自定义图片</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr ng-repeat="item in pagedItems[curPage-1]">
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td><i class="fa fa-circle"></i></td>
+                    <td><img src="img/slides/slide{{item.id}}.jpg"></td>
+                </tr>
+                </tbody>
+
+                <tfoot>
+                <tr>
+                    <td colspan="4" class="text-center form-inline">
+                        <qs-pagination direction-links="true" boundary-links="true" total-items="totalItems" ng-model="curPage" items-per-page="itemsPerPage"></qs-pagination>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+
+        </qs-panel>
+    </div>
+
+</div>
