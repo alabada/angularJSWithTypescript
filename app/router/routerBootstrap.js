@@ -1,7 +1,10 @@
 /**
  * Created by luozhanghua on 2016/7/20 0020.
  */
-define(["angularAMD","config"], function(angularAMD, app) {
+define(["angularAMD","config"], function(angularAMD, config) {
+
+    var app = config.app;
+
     app.provider('routersBootstrap', function ($stateProvider) {
         this.$get = function () {
             var service = {
@@ -15,7 +18,8 @@ define(["angularAMD","config"], function(angularAMD, app) {
                         }
                     })).state('dashboard.fonts',angularAMD.route({
                         url:"/fonts",
-                        controllerUrl:"js/controller/bootstrap/FontsController.js",
+                        controllerUrl: "js/controller/bootstrap/FontsController.js",
+                        controllerAs: "vm",
                         templateUrl:"views/"+theme+"/bootstrap/fonts/fontsDemo.html",
                         resolve: {
                             $title: function() { return "字体库"; }

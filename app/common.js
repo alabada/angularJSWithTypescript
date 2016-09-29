@@ -26,6 +26,5 @@ define([
     "ui-bootstrap"
 ], function(angularAMD) {
     'use strict';
-
     return angularAMD;
 });

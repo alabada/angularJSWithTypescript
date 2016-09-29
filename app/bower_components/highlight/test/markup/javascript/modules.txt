@@ -4,5 +4,5 @@ export function each(obj, iterator, context) {};
 export { each as forEach };
 export function something() {};
 
-//------ main.js ------
+//------ main.ts ------
 import _, { each, something as otherthing } from 'underscore';

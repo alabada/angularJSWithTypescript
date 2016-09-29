@@ -1,7 +1,10 @@
 /**
  * Created by wenhui.gao on 2016/7/20.
  */
-define(["angularAMD", "config"], function(angularAMD, app) {
+define(["angularAMD", "config"], function(angularAMD, config) {
+
+    var app = config.app;
+
     app.provider('routersOiSelect', function($stateProvider) {
         this.$get = function() {
             var service = {

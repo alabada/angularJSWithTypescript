@@ -1,7 +1,10 @@
 /**
  * Created by Jonathan on 2016/7/7.
  */
-define(["angularAMD","config"], function(angularAMD, app) {
+define(["angularAMD","config"], function(angularAMD, config) {
+
+    var app = config.app;
+
     app.provider('routersCustom', function ($stateProvider) {
         this.$get = function () {
             var service = {

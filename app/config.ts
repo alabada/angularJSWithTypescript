@@ -1,10 +1,13 @@
 /// <reference path="../typings/main.d.ts" />
-define(["require", "exports", 'angular'], function (require, exports, angular) {
-    "use strict";
-    exports.app = angular.module('app', [
+
+
+import * as angular from 'angular';
+
+
+export var app = angular.module('app',[
         "ui.router",
         "ngResource",
-        "angularCSS",
+        "angularCSS", //新版本door3改为angularCss
         "qsTree",
         "ng.ueditor",
         "ui.router.title",
@@ -20,4 +23,6 @@ define(["require", "exports", 'angular'], function (require, exports, angular) {
         "angular-loading-bar",
         "angular-md5"
     ]);
-});
+
+
+

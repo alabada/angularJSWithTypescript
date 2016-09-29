@@ -20,7 +20,7 @@ var gulp           = require("gulp"),
     tsc = require('gulp-typescript'),
     tslint = require('gulp-tslint'),
     del = require('del'),
-    tsProject = tsc.createProject('tsconfig.json'),
+    tsProject = tsc.createProject('tsconfig.json', {module: 'amd'}),
     superstatic = require( 'superstatic' );
 
 var PATH = {

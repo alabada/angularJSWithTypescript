@@ -1,7 +1,10 @@
 /**
  * Created by luozhanghua on 2016/7/20 0020.
  */
-define(["angularAMD","config",'router/routerOiSelect','router/routerObjectTable'], function(angularAMD, app) {
+define(["angularAMD","config",'router/routerOiSelect','router/routerObjectTable'], function(angularAMD, config) {
+
+    var app = config.app;
+
     app.provider('routersThird', function ($stateProvider) {
         this.$get = [ 'routersOiSelect', 'routersObjectTable', function (routersOiSelect, routersObjectTable) {
             var service = {

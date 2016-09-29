@@ -91,7 +91,7 @@
 
 #### Bug Fixes
 
-* **main.js:**
+* **main.ts:**
   * we now hide the popover at the end of the image resize. ([c182c96c](https://github.com/fraywing/textAngular/commit/c182c96c))
   * we now hide the popover at the end of the image resize. ([d9cfcf15](https://github.com/fraywing/textAngular/commit/d9cfcf15))
   * Fix for #862 where the model was not changing after image resize. ([d5a508e3](https://github.com/fraywing/textAngular/commit/d5a508e3))

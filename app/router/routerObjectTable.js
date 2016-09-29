@@ -1,5 +1,8 @@
 
-define(["angularAMD", "config"], function(angularAMD, app) {
+define(["angularAMD", "config"], function(angularAMD, config) {
+
+    var app = config.app;
+
     app.provider('routersObjectTable', function($stateProvider) {
         this.$get = function() {
             var service = {
