@@ -7,6 +7,13 @@ define(['common', 'router', 'config'], function (angularAMD, registerRoutes, con
 
     var app = config.app;
 
+    app.config(function (RestangularProvider) {
+        //RestangularProvider.setBaseUrl('http://localhost:3001');
+        //RestangularProvider.setBaseUrl('http://localhost:8080/qishon-iss-web/rest/');
+        // RestangularProvider.setBaseUrl('http://1.1.20.9:3000/api');
+        RestangularProvider.setBaseUrl('http://localhost:3000/');
+    });
+
     /**
      * 路由配置
      */

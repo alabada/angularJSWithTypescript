@@ -13,6 +13,7 @@ define(["angularAMD","config"], function(angularAMD, config) {
                         url:"/grid",
                         controllerUrl:"js/controller/GridController.js",
                         templateUrl:"views/"+theme+"/grid/gridDemo.html",
+                        controllerAs: "vm",
                         css:"css/grid/scrollable-table.css"
                     })).state('dashboard.gridModify',angularAMD.route({
                         url:"/gridModify/{id}",

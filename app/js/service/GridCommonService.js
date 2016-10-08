@@ -7,7 +7,7 @@ define(["app"], function (app) {
             /*
              在所有的可用数据中搜索匹配条件的数据
              */
-            searchMatch:function (haystack, needle) {
+            searchMatch: function (haystack, needle) {
                 if (!needle) { // 没有条件，视为满足条件
                     return true;
                 }
@@ -20,7 +20,7 @@ define(["app"], function (app) {
             /*
              按页分组
              */
-            groupToPages:function (interface) {
+            groupToPages: function (interface) {
                 interface.pagedItems = [];
 
                 for (var i = 0; i < interface.filteredItems.length; i++) {
