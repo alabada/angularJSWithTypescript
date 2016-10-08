@@ -32,11 +32,15 @@ define(["angularAMD","config"], function(angularAMD, config) {
                         url:"/qsProgressbar",
                         controllerUrl:"js/controller/bootstrap/QsProgressbarController.js",
                         templateUrl:"views/"+theme+"/bootstrap/progressbar/qsProgressbarDemo.html"
+
                     })).state('dashboard.qsPanel',angularAMD.route({
                         url:"/qsPanel",
                         controllerUrl:"js/controller/bootstrap/QsPanelController.js",
+                        controllerAs: "vm",
                         templateUrl:"views/"+theme+"/bootstrap/panel/qsPanelDemo.html"
-                    })).state('dashboard.qsInput',angularAMD.route({
+                    }))
+
+                        .state('dashboard.qsInput',angularAMD.route({
                         url:"/qsInput",
                         controllerUrl:"js/controller/bootstrap/QsInputController.js",
                         templateUrl:"views/"+theme+"/bootstrap/input/qsInputDemo.html"

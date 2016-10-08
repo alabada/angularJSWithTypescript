@@ -3,7 +3,7 @@
  */
 // bootstrap
 
-define(['common', 'router', './config'], function (angularAMD, registerRoutes, config) {
+define(['common', 'router', 'config'], function (angularAMD, registerRoutes, config) {
 
     var app = config.app;
 

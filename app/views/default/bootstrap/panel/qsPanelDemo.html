@@ -124,12 +124,6 @@
 
     <br />
     <h3>带表格的panel扩展</h3>
-    <div class="input-append">
-        <input type="text" ng-model="query" ng-change="search()" class="input-large search-query" placeholder="Search">
-        <span><i class="fa fa-search"></i></span>
-    </div>
-    <button ng-click="addItem()">addItem</button>
-    <button ng-click="subItem()">subItem</button>
     <qs-panel colour="green">
         <qs-panel-head>启尚标题</qs-panel-head>
         <div class="scrollArea">
@@ -139,20 +133,14 @@
                         <th class="id">Id&nbsp;<a ng-click="sortBy('id')"><i class="fa fa-sort"></i></a></th>
                         <th class="name">Name&nbsp;<a ng-click="sortBy('name')"><i class="fa fa-sort"></i></a></th>
                         <th class="description">Description&nbsp;<a ng-click="sortBy('description')"><i class="fa fa-sort"></i></a></th>
-                        <th class="field3">Field 3&nbsp;<a ng-click="sortBy('field3')"><i class="fa fa-sort"></i></a></th>
-                        <th class="field4">Field 4&nbsp;<a ng-click="sortBy('field4')"><i class="fa fa-sort"></i></a></th>
-                        <th class="field5">Field 5&nbsp;<a ng-click="sortBy('field5')"><i class="fa fa-sort"></i></a></th>
                     </tr>
                 </thead>
 
                 <tbody>
-                    <tr ng-repeat="item in pagedItems[currentPage-1] | orderBy:sortingOrder:reverse">
+                    <tr ng-repeat="item in vm.pagedItems[vm.currentPage-1] | orderBy:vm.sortingOrder:reverse">
                         <td>{{item.id}}</td>
                         <td>{{item.name}}</td>
                         <td>{{item.description}}</td>
-                        <td>{{item.field3}}</td>
-                        <td>{{item.field4}}</td>
-                        <td>{{item.field5}}</td>
                     </tr>
                 </tbody>
 
@@ -160,12 +148,12 @@
                     <tr>
                         <td colspan="6" class="text-center form-inline">
                             <qs-pagination direction-links="true" boundary-links="true" total-items="totalItems" ng-model="currentPage" items-per-page="itemsPerPage"></qs-pagination>
-                            <input class="form-control" style="vertical-align: top; margin: 20px 0" type="number" ng-model="interface.curPage" placeholder="请输入数字">
                         </td>
                     </tr>
                 </tfoot>
             </table>
         </div>
     </qs-panel>
+
 
 </div>

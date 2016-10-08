@@ -23,7 +23,6 @@ define(["require", "exports", "../../../config", "./AbstractFontsController"], f
             console.log(this.testTS);
             console.log(this.testAbstract);
         }
-        FontsController.$inject = ["$scope"];
         return FontsController;
     }(AbstractFontsController));
     config_1.app.controller('FontsController', FontsController);
