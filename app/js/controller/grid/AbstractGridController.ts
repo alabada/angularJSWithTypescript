@@ -9,62 +9,56 @@ import {app} from "../../../config";
 import GridProperty = require("./GridProperty");
 import PersonDto = require("./PersonDto");
 import "../../directive/grid/qsGrid";
+import GridCommonService = require("../../service/GridCommonService");
 
-class AbstractGridController {
+abstract class AbstractGridController {
 
     gridProperty: GridProperty;
     queryString: string;
 
     $filter: ng.IFilterService;
+    gridCommonService: GridCommonService;
 
-    items: PersonDto[] = [
-        {"id":"1","name":"name 1","age":"11", "email":"a@q.com", "dept":"15750", "telephone": "123232"}
-    ];
-
+    items: PersonDto[] = [];
 
     gridSearchJsonUrl: string = '../../../data/gridSearch.json';
     gridCrudJsonUrl: string = '../../../data/gridCrud.json';
 
-    static $inject = ["$filter"];
-    constructor() {
+    //static $inject = ["$filter"];
+    constructor(GridJsonRepository: any) {
         this.gridProperty = new GridProperty();
-        this.gridProperty.url = '../../../data/gridPanel.json';
-        this.init();
-
+        this.gridCommonService = new GridCommonService();
+        this.init(GridJsonRepository);
     }
 
     /*
      过滤数据并显示
      */
     search = function () {
-
-        //GridCommon.orderAndDisplay(this.gridProperty);
+        this.gridProperty.filteredItems = this.items;
+        this.gridCommonService.orderAndDisplay(this.gridProperty);
     };
 
     // 加载数据并刷新视图
-    init = function () {
+    init: (GridJsonRepository) => void = function(GridJsonRepository) {
+        let vm =this;
+        GridJsonRepository.getAll().then(function(items) {
+            angular.forEach(items, function (item, index) {
+                let person = new PersonDto();
+                person.id = item.id;
+                person.name = item.name;
+                person.age = item.age;
+                person.email = item.email;
+                person.dept = item.dept;
+                person.telephone = item.telephone;
 
-        this.gridProperty.filteredItems = this.items;
-        this.gridProperty.totalItems = this.gridProperty.filteredItems.length;
-        this.gridProperty.currentPage = 1;
+                person.gridIndex = index;
+                person.itemSelected = false;
 
-        for (let i = 0; i < this.gridProperty.filteredItems.length; i++) {
-            let itemsPerPageLocal = angular.isDefined(this.gridProperty.itemsPerPage) ? this.gridProperty.itemsPerPage : 10;
-            if (i % itemsPerPageLocal === 0) {
-                this.gridProperty.pagedItems[Math.floor(i / itemsPerPageLocal)] = [this.gridProperty.filteredItems[i]]; // 初始化一个数组
-            } else {
-                this.gridProperty.pagedItems[Math.floor(i / itemsPerPageLocal)].push(this.gridProperty.filteredItems[i]);
-            }
-        }
-
-        //GridJsonRepository.getAll().then(function(items) {
-        //    this.items = items;
-        //    angular.forEach(this.items, function (item, index) {
-        //        item.gridIndex = index;
-        //        item.itemSelected = false;
-        //    });
-        //    this.search();
-        //});
+                vm.items.push(person);
+            })
+            vm.search();
+        });
     };
 }
 

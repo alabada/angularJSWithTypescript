@@ -102,8 +102,6 @@ define(["app",
             },
             controller: ['$scope', '$element', '$location','SweetAlert', function ($scope, $element, $location, SweetAlert) {
 
-                console.log($scope)
-
                 $scope.interface.selectAll = false;
                 $scope.interface.reverse = false;
                 $scope.pageGroup = [5, 10, 20];

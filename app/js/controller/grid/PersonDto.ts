@@ -10,6 +10,8 @@ class PersonDto {
     email: string;
     dept: string;
     telephone: string;
+    gridIndex: number;
+    itemSelected: boolean;
 
     constructor() {
     }
