@@ -14,21 +14,20 @@ import GridCommonService = require("../../service/GridCommonService");
 abstract class AbstractGridController {
 
     gridProperty: GridProperty;
-    queryString: string;
 
-    $filter: ng.IFilterService;
     gridCommonService: GridCommonService;
+    gridJsonRepository: any;
 
     items: PersonDto[] = [];
 
     gridSearchJsonUrl: string = '../../../data/gridSearch.json';
     gridCrudJsonUrl: string = '../../../data/gridCrud.json';
 
-    //static $inject = ["$filter"];
-    constructor(GridJsonRepository: any) {
-        this.gridProperty = new GridProperty();
+    constructor(GridJsonRepository: any, SweetAlert: any) {
+        this.gridProperty = new GridProperty(SweetAlert);
         this.gridCommonService = new GridCommonService();
-        this.init(GridJsonRepository);
+        this.gridJsonRepository = GridJsonRepository;
+        this.init();
     }
 
     /*
@@ -40,9 +39,9 @@ abstract class AbstractGridController {
     };
 
     // 加载数据并刷新视图
-    init: (GridJsonRepository) => void = function(GridJsonRepository) {
+    init: () => void = function() {
         let vm =this;
-        GridJsonRepository.getAll().then(function(items) {
+        this.gridJsonRepository.getAll().then(function(items) {
             angular.forEach(items, function (item, index) {
                 let person = new PersonDto();
                 person.id = item.id;

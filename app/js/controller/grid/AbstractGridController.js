@@ -4,8 +4,7 @@
 define(["require", "exports", "./GridProperty", "./PersonDto", "../../service/GridCommonService", "../../directive/grid/qsGrid"], function (require, exports, GridProperty, PersonDto, GridCommonService) {
     "use strict";
     var AbstractGridController = (function () {
-        //static $inject = ["$filter"];
-        function AbstractGridController(GridJsonRepository) {
+        function AbstractGridController(GridJsonRepository, SweetAlert) {
             this.items = [];
             this.gridSearchJsonUrl = '../../../data/gridSearch.json';
             this.gridCrudJsonUrl = '../../../data/gridCrud.json';
@@ -17,9 +16,9 @@ define(["require", "exports", "./GridProperty", "./PersonDto", "../../service/Gr
                 this.gridCommonService.orderAndDisplay(this.gridProperty);
             };
             // 加载数据并刷新视图
-            this.init = function (GridJsonRepository) {
+            this.init = function () {
                 var vm = this;
-                GridJsonRepository.getAll().then(function (items) {
+                this.gridJsonRepository.getAll().then(function (items) {
                     angular.forEach(items, function (item, index) {
                         var person = new PersonDto();
                         person.id = item.id;
@@ -35,9 +34,10 @@ define(["require", "exports", "./GridProperty", "./PersonDto", "../../service/Gr
                     vm.search();
                 });
             };
-            this.gridProperty = new GridProperty();
+            this.gridProperty = new GridProperty(SweetAlert);
             this.gridCommonService = new GridCommonService();
-            this.init(GridJsonRepository);
+            this.gridJsonRepository = GridJsonRepository;
+            this.init();
         }
         return AbstractGridController;
     }());
