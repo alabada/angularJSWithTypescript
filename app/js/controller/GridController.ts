@@ -2,14 +2,14 @@
  * Created by zhida.wen on 2016/10/8.
  */
 
-/// <reference path="../../../typings/main.d.ts" />
-
 import {app} from "../../config";
 import AbstractGridController = require("./grid/AbstractGridController");
 import "../service/GridJsonRepository";
 import "../directive/alert/SweetAlert";
 
 class GridController extends AbstractGridController {
+
+    inputString: string = "test";
 
     sweetAlert:any;
 
@@ -21,7 +21,8 @@ class GridController extends AbstractGridController {
         this.gridProperty.url = '../../../data/gridPanel.json';
     }
 
-    delRowFunc = function () {
+    delRowFunc:() => void = function () {
+        console.log(this.inputString);
         if (this.gridProperty.selectedItems.length <= 0) {
             this.sweetAlert.swal('请至少选中一个条目');
             return;

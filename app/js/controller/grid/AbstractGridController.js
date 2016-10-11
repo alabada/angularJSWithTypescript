@@ -4,10 +4,10 @@
 define(["require", "exports", "./GridProperty", "./PersonDto", "../../service/GridCommonService", "../../directive/grid/qsGrid"], function (require, exports, GridProperty, PersonDto, GridCommonService) {
     "use strict";
     var AbstractGridController = (function () {
+        //gridSearchJsonUrl: string = '../../../data/gridSearch.json';
+        //gridCrudJsonUrl: string = '../../../data/gridCrud.json';
         function AbstractGridController(GridJsonRepository, SweetAlert) {
             this.items = [];
-            this.gridSearchJsonUrl = '../../../data/gridSearch.json';
-            this.gridCrudJsonUrl = '../../../data/gridCrud.json';
             /*
              过滤数据并显示
              */

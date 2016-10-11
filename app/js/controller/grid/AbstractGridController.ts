@@ -2,9 +2,6 @@
  * Created by zhida.wen on 2016/10/8.
  */
 
-/// <reference path="../../../../typings/main.d.ts" />
-
-
 import {app} from "../../../config";
 import GridProperty = require("./GridProperty");
 import PersonDto = require("./PersonDto");
@@ -20,8 +17,8 @@ abstract class AbstractGridController {
 
     items: PersonDto[] = [];
 
-    gridSearchJsonUrl: string = '../../../data/gridSearch.json';
-    gridCrudJsonUrl: string = '../../../data/gridCrud.json';
+    //gridSearchJsonUrl: string = '../../../data/gridSearch.json';
+    //gridCrudJsonUrl: string = '../../../data/gridCrud.json';
 
     constructor(GridJsonRepository: any, SweetAlert: any) {
         this.gridProperty = new GridProperty(SweetAlert);
@@ -33,13 +30,13 @@ abstract class AbstractGridController {
     /*
      过滤数据并显示
      */
-    search = function () {
+    search:() => void = function () {
         this.gridProperty.filteredItems = this.items;
         this.gridCommonService.orderAndDisplay(this.gridProperty);
     };
 
     // 加载数据并刷新视图
-    init: () => void = function() {
+    init:() => void = function() {
         let vm =this;
         this.gridJsonRepository.getAll().then(function(items) {
             angular.forEach(items, function (item, index) {

@@ -12,7 +12,9 @@ define(["require", "exports", "../../config", "./grid/AbstractGridController", "
         __extends(GridController, _super);
         function GridController(GridJsonRepository, SweetAlert) {
             _super.call(this, GridJsonRepository, SweetAlert);
+            this.inputString = "test";
             this.delRowFunc = function () {
+                console.log(this.inputString);
                 if (this.gridProperty.selectedItems.length <= 0) {
                     this.sweetAlert.swal('请至少选中一个条目');
                     return;
