@@ -4,7 +4,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-define(["require", "exports", "../../../config", "./AbstractFontsController"], function (require, exports, config_1, AbstractFontsController) {
+define(["require", "exports", "app/config", "./AbstractFontsController"], function (require, exports, config_1, AbstractFontsController) {
     "use strict";
     var FontsController = (function (_super) {
         __extends(FontsController, _super);
@@ -14,6 +14,7 @@ define(["require", "exports", "../../../config", "./AbstractFontsController"], f
             this.getData = function () {
                 this.testTS = "data in func";
                 console.log(this.testTS);
+                var a = 123;
             };
             // 测试重写
             this.print = function () {

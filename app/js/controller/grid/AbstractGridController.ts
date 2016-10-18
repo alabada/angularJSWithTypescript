@@ -2,10 +2,11 @@
  * Created by zhida.wen on 2016/10/8.
  */
 
-import {app} from "../../../config";
+import {app} from "app/config";
+import "../../directive/grid/qsGrid";
+
 import GridProperty = require("./GridProperty");
 import PersonDto = require("./PersonDto");
-import "../../directive/grid/qsGrid";
 import GridCommonService = require("../../service/GridCommonService");
 
 abstract class AbstractGridController {

@@ -1,11 +1,12 @@
 /// <reference path="../../../../typings/main.d.ts" />
 
-import {app} from "../../../config";
+import {app} from "app/config";
 import AbstractFontsController = require("./AbstractFontsController");
 
 class FontsController extends AbstractFontsController {
 
     testTS:String = "test";
+
 
     constructor() {
         super();
@@ -16,6 +17,8 @@ class FontsController extends AbstractFontsController {
     getData:() => void = function () {
         this.testTS = "data in func";
         console.log(this.testTS);
+
+        let a = 123;
     }
 
     // 测试重写

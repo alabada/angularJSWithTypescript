@@ -1,7 +1,7 @@
 /**
  * Created by zhida.wen on 2016/10/8.
  */
-define(["require", "exports", "./GridProperty", "./PersonDto", "../../service/GridCommonService", "../../directive/grid/qsGrid"], function (require, exports, GridProperty, PersonDto, GridCommonService) {
+define(["require", "exports", "./GridProperty", "./PersonDto", 'app/js/service/GridCommonService', "../../directive/grid/qsGrid"], function (require, exports, GridProperty, PersonDto, GridCommonService) {
     "use strict";
     var AbstractGridController = (function () {
         //gridSearchJsonUrl: string = '../../../data/gridSearch.json';
